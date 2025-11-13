@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import { SEOHead } from '../components/SEOHead';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -7,26 +8,106 @@ export function Contact() {
     email: '',
     company: '',
     category: 'sme',
-    message: ''
+    message: '',
+    gdprConsent: false,
+    marketingConsent: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real implementation, this would send the form data to a backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We will get back to you within 24 hours.');
-    setFormData({ name: '', email: '', company: '', category: 'sme', message: '' });
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+
+    if (!formData.gdprConsent) {
+      newErrors.gdprConsent = 'You must consent to data processing to submit this form';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setFormState('submitting');
+
+    try {
+      // In a real implementation, this would send to your backend API
+      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) });
+
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
+      console.log('Form submitted:', formData);
+      setFormState('success');
+
+      // Reset form after success
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          category: 'sme',
+          message: '',
+          gdprConsent: false,
+          marketingConsent: false,
+        });
+        setFormState('idle');
+      }, 3000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormState('error');
+      setTimeout(() => setFormState('idle'), 5000);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: type === 'checkbox' ? checked : value,
     });
+
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: '' });
+    }
   };
 
   return (
     <div className="bg-white">
+      <SEOHead
+        title="Contact Us - Cynea AI | Get in Touch for AI Solutions"
+        description="Contact Cynea AI for AI automation, blockchain compliance, digital finance solutions. Serving SMEs, corporates, and government entities across the UK and emerging markets."
+        keywords="contact cynea ai, AI consultation UK, business AI solutions contact, AI support, get in touch AI company"
+        canonicalUrl="https://cynea.ai/contact"
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,18 +250,142 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none ${
+                        errors.message ? 'border-error' : 'border-gray-300'
+                      }`}
                       placeholder="Tell us about your needs or questions..."
+                      aria-invalid={!!errors.message}
+                      aria-describedby={errors.message ? 'message-error' : undefined}
                     ></textarea>
+                    {errors.message && (
+                      <p id="message-error" className="mt-1 text-sm text-error flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {errors.message}
+                      </p>
+                    )}
                   </div>
 
+                  {/* GDPR Compliance Section */}
+                  <div className="space-y-4 bg-blue-50 p-4 rounded-lg border-2 border-blue-200">
+                    <h4 className="text-gray-900 font-semibold mb-3">Data Protection & Consent</h4>
+
+                    {/* Required GDPR Consent */}
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="gdprConsent"
+                        name="gdprConsent"
+                        checked={formData.gdprConsent}
+                        onChange={handleChange}
+                        className={`mt-1 w-5 h-5 rounded border-2 cursor-pointer accent-primary ${
+                          errors.gdprConsent ? 'border-error' : 'border-gray-300'
+                        }`}
+                        aria-invalid={!!errors.gdprConsent}
+                        aria-describedby={errors.gdprConsent ? 'gdpr-error' : undefined}
+                      />
+                      <label htmlFor="gdprConsent" className="ml-3 text-sm text-gray-700">
+                        <span className="font-semibold text-gray-900">I consent to data processing *</span>
+                        <br />I agree to Cynea AI processing my personal data according to the{' '}
+                        <a
+                          href="/privacy-policy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary underline hover:text-primary-hover"
+                        >
+                          Privacy Policy
+                        </a>
+                        . My data will be used solely to respond to this inquiry and will be stored securely.
+                      </label>
+                    </div>
+                    {errors.gdprConsent && (
+                      <p id="gdpr-error" className="text-sm text-error flex items-center gap-1">
+                        <AlertCircle className="w-4 h-4" />
+                        {errors.gdprConsent}
+                      </p>
+                    )}
+
+                    {/* Optional Marketing Consent */}
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="marketingConsent"
+                        name="marketingConsent"
+                        checked={formData.marketingConsent}
+                        onChange={handleChange}
+                        className="mt-1 w-5 h-5 rounded border-2 border-gray-300 cursor-pointer accent-primary"
+                      />
+                      <label htmlFor="marketingConsent" className="ml-3 text-sm text-gray-700">
+                        <span className="font-semibold text-gray-900">I'd like to receive updates (Optional)</span>
+                        <br />I consent to receiving marketing communications, newsletters, and product updates from Cynea AI.
+                        You can unsubscribe at any time.
+                      </label>
+                    </div>
+
+                    <p className="text-xs text-gray-600 mt-2">
+                      By submitting this form, you acknowledge that your information will be processed in accordance with
+                      UK GDPR regulations. See our{' '}
+                      <a href="/privacy-policy" className="text-primary underline" target="_blank" rel="noopener noreferrer">
+                        Privacy Policy
+                      </a>{' '}
+                      and{' '}
+                      <a href="/terms-of-service" className="text-primary underline" target="_blank" rel="noopener noreferrer">
+                        Terms of Service
+                      </a>{' '}
+                      for more information.
+                    </p>
+                  </div>
+
+                  {/* Form Status Messages */}
+                  {formState === 'success' && (
+                    <div className="bg-success-light border-l-4 border-success p-4 rounded" role="alert">
+                      <div className="flex items-center">
+                        <CheckCircle2 className="w-5 h-5 text-success mr-3" />
+                        <div>
+                          <p className="font-semibold text-success-dark">Message sent successfully!</p>
+                          <p className="text-sm text-success-dark">
+                            Thank you for contacting us. We'll respond within 24 hours.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {formState === 'error' && (
+                    <div className="bg-error-light border-l-4 border-error p-4 rounded" role="alert">
+                      <div className="flex items-center">
+                        <AlertCircle className="w-5 h-5 text-error mr-3" />
+                        <div>
+                          <p className="font-semibold text-error-dark">Something went wrong</p>
+                          <p className="text-sm text-error-dark">
+                            Please try again or email us directly at info@cynea.ai
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition inline-flex items-center justify-center"
+                    disabled={formState === 'submitting'}
+                    className="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                    data-loading={formState === 'submitting'}
                   >
-                    Send Message
-                    <Send className="ml-2 w-5 h-5" />
+                    {formState === 'submitting' ? (
+                      <>
+                        <span className="animate-pulse">Sending...</span>
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="ml-2 w-5 h-5" />
+                      </>
+                    )}
                   </button>
+
+                  <p className="text-xs text-gray-500">
+                    * Required fields
+                  </p>
                 </form>
               </div>
             </div>
