@@ -158,7 +158,7 @@ export function CareerGrowth() {
                     </li>
                   </ul>
                   <div className="mt-3 text-sm text-gray-600">
-                    <strong>Duration:</strong> 8 weeks • <strong>Projects:</strong> 4 portfolio pieces
+                    <strong>Duration:</strong> 4 weeks • <strong>Projects:</strong> 4 portfolio pieces
                   </div>
                 </div>
 
@@ -328,7 +328,7 @@ export function CareerGrowth() {
             </Link>
           </div>
           <p className="mt-6 text-amber-100 text-sm">
-            Next cohort starts in 3 weeks • Limited spots available • Flexible payment options
+            Rolling Admissions • Limited spots available • Flexible payment options
           </p>
         </div>
       </section>

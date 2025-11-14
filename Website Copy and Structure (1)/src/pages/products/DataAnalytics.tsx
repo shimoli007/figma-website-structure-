@@ -21,7 +21,7 @@ export function DataAnalytics() {
                 to="/contact" 
                 className="inline-flex items-center justify-center bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition"
               >
-                Explore Platform
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
@@ -366,7 +366,7 @@ export function DataAnalytics() {
               to="/contact" 
               className="inline-flex items-center justify-center bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition"
             >
-              Explore Analytics Platform
+              Monetize Your Data
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 

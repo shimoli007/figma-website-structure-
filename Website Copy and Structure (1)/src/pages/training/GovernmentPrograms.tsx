@@ -33,7 +33,7 @@ export function GovernmentPrograms() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-gray-900 mb-4">Proven Government Partnerships</h2>
+            <h2 className="text-gray-900 mb-4">Ongoing Government Partnerships</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Cynea AI is the trusted training partner for forward-thinking governments building AI capabilities
             </p>
@@ -52,7 +52,7 @@ export function GovernmentPrograms() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span>15 ministries and departments reached</span>
+                  <span>5 ministries and departments reached</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -233,7 +233,7 @@ export function GovernmentPrograms() {
                   <CheckCircle className="w-6 h-6 text-emerald-500 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900">Proven Track Record</h4>
-                    <p className="text-gray-600">Official partnerships with Kenya School of Government and Zambian National Government</p>
+                    <p className="text-gray-600">Our government partnerships provide real-world experience and industry expertise</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -281,9 +281,9 @@ export function GovernmentPrograms() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-emerald-600 mb-2">250+</div>
+              <div className="text-emerald-600 mb-2">200+</div>
               <div className="text-gray-900 mb-1">Officials Trained</div>
-              <p className="text-gray-600 text-sm">Across Kenya and Zambia</p>
+              <p className="text-gray-600 text-sm">Across Our Govt Partnership Programs</p>
             </div>
             <div className="text-center">
               <div className="text-emerald-600 mb-2">15</div>

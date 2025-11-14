@@ -19,16 +19,18 @@ export function Footer() {
               <span className="text-white">Cynea AI</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Building AI + Blockchain infrastructure for emerging market SMEs. Powering trusted, data-driven, borderless trade ecosystems across UK-Emerging Markets corridors.
+            <div>Email: irene@cynea.ai</div>
+            <div>Phone: +44 7469 721021</div>
+            <div>Address: 5 Merchant Square, London, UK</div>
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition">
+              <a href="https://uk.linkedin.com/company/cynea-africa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="mailto:info@cynea.ai" className="text-gray-400 hover:text-blue-500 transition">
+              <a href="mailto:irene@cynea.ai" className="text-gray-400 hover:text-blue-500 transition">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -76,7 +78,7 @@ export function Footer() {
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <div className="flex items-center text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 mr-1" />
-                <span>UK • Nairobi • Zambia</span>
+                <span>5 Merchant Square, London </span>
               </div>
               <Link to="/privacy" className="text-gray-400 hover:text-white transition text-sm">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-400 hover:text-white transition text-sm">Terms of Service</Link>

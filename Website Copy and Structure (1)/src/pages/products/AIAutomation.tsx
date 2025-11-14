@@ -21,7 +21,7 @@ export function AIAutomation() {
                 to="/contact" 
                 className="inline-flex items-center justify-center bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition"
               >
-                Request Demo
+                Request Automation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
@@ -243,7 +243,7 @@ export function AIAutomation() {
                 </li>
               </ul>
               <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
-                Request Demo <ArrowRight className="ml-1 w-4 h-4" />
+                Request Automation <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
 
@@ -271,7 +271,7 @@ export function AIAutomation() {
                 </li>
               </ul>
               <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
-                Request Demo <ArrowRight className="ml-1 w-4 h-4" />
+                Request Automation <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
 
@@ -299,7 +299,7 @@ export function AIAutomation() {
                 </li>
               </ul>
               <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
-                Request Demo <ArrowRight className="ml-1 w-4 h-4" />
+                Request Automation <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
           </div>

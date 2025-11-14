@@ -118,7 +118,7 @@ export function B2BTraining() {
               <Users className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-gray-900 mb-3">Custom AI Implementation Training</h3>
               <p className="text-gray-600 mb-4">
-                4-8 week programs to train your teams on specific AI tools relevant to your business operations.
+                Up to 8-week programs to train your teams on specific AI tools relevant to your business operations.
               </p>
               <ul className="space-y-2 text-sm text-gray-600 mb-6">
                 <li className="flex items-start">
@@ -215,14 +215,14 @@ export function B2BTraining() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-blue-600 mb-4">Financial Services</div>
+              <div className="text-blue-600 mb-4">Solar Solutions</div>
               <h4 className="text-gray-900 mb-2">Solar Company: Training Installers with AI</h4>
               <p className="text-gray-600 text-sm mb-4">
                 Solar energy company trained 50 field installers on AI-powered diagnostic tools and automated reporting, reducing installation errors by 40% and cutting paperwork time by 70%.
               </p>
               <div className="flex items-center text-sm text-gray-600">
                 <Award className="w-4 h-4 text-blue-600 mr-1" />
-                <span>40+ employees trained</span>
+                <span> 18+ employees trained</span>
               </div>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">

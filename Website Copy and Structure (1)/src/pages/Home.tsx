@@ -42,7 +42,7 @@ export function Home() {
                 <div className="border-l border-blue-400 h-12"></div>
                 <div>
                   <div className="text-blue-100 text-sm">Supporting</div>
-                  <div className="text-white">100+ SMEs</div>
+                  <div className="text-white">30+ SMEs</div>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export function Home() {
           <div className="text-center mb-16">
             <h2 className="text-gray-900 mb-4">Complete Infrastructure Stack</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We're not just a platform or tool—we're the full infrastructure that emerging market SMEs need to compete in the global economy. From AI training to digital finance, we've got you covered.
+              We provide the full infrastructure that emerging market business need to compete in the global economy. From AI training to digital finance, we've got you covered.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -241,7 +241,7 @@ export function Home() {
           <div className="text-center mb-12">
             <h2 className="text-white mb-4">Trusted by Leaders Across Sectors</h2>
             <p className="text-blue-100 max-w-2xl mx-auto">
-              From government institutions to innovative SMEs, Cynea AI is powering digital transformation across UK-Emerging Markets corridors.
+              From government institutions to innovative businesses, Cynea AI is powering digital transformation across UK-Emerging Markets corridors.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -276,7 +276,7 @@ export function Home() {
           <div className="text-center mb-12">
             <h2 className="text-gray-900 mb-4">Choose Your Path Forward</h2>
             <p className="text-gray-600">
-              Whether you're an SME, government institution, enterprise, or marketing professional, we have solutions tailored for you.
+              Whether you're an SME, government institution, enterprise, or a professional, we have solutions tailored for you.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -308,9 +308,9 @@ export function Home() {
               </Link>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border-2 border-transparent hover:border-blue-600 transition">
-              <h4 className="text-gray-900 mb-2">For Marketers</h4>
+              <h4 className="text-gray-900 mb-2">For Individuals</h4>
               <p className="text-gray-600 mb-4 text-sm">
-                AI automation for marketing campaigns
+                AI Upskilling for professionals
               </p>
               <Link to="/training/marketing" className="text-blue-600 hover:text-blue-700 inline-flex items-center">
                 Join Academy <ArrowRight className="ml-1 w-4 h-4" />

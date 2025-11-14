@@ -11,7 +11,7 @@ export function UseCases() {
           <div className="max-w-3xl">
             <h1 className="text-white mb-6">Real Businesses, Real Results</h1>
             <p className="text-indigo-100 text-lg mb-8">
-              See how SMEs across emerging markets are using Cynea AI to transform their operations, meet compliance requirements, and scale internationally.
+              See how businesses across emerging markets are using Cynea AI to transform their operations, meet compliance requirements, and scale internationally.
             </p>
           </div>
         </div>
@@ -202,7 +202,7 @@ export function UseCases() {
               <TrendingUp className="w-10 h-10 text-teal-600 mb-4" />
               <h4 className="text-gray-900 mb-2">Fish Export to EU</h4>
               <p className="text-gray-600 mb-4 text-sm">
-                Tanzanian fish exporter used stablecoin payments to protect against currency devaluation, saving $45K in 6 months on a $300K contract.
+                Fish exporter used stablecoin payments to protect against currency devaluation, saving $45K in 6 months on a $300K contract.
               </p>
               <div className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-teal-600 mr-2" />
@@ -214,7 +214,7 @@ export function UseCases() {
               <TrendingUp className="w-10 h-10 text-blue-600 mb-4" />
               <h4 className="text-gray-900 mb-2">Manufacturing Supply Chain</h4>
               <p className="text-gray-600 mb-4 text-sm">
-                Kenyan manufacturer implemented blockchain traceability for raw materials, enabling ISO certification and winning 3 new corporate contracts.
+                A manufacturer implemented blockchain traceability for raw materials, enabling ISO certification and winning 3 new corporate contracts.
               </p>
               <div className="flex items-center text-sm text-gray-600">
                 <CheckCircle className="w-4 h-4 text-blue-600 mr-2" />

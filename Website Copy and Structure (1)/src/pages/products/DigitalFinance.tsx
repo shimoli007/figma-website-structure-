@@ -202,7 +202,7 @@ export function DigitalFinance() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-gray-900 mb-4">Traditional Banking vs. Cynea Finance</h2>
+            <h2 className="text-gray-900 mb-4">Traditional Banking vs. Our Solution</h2>
             <p className="text-gray-600">See how much you can save on every transaction</p>
           </div>
           <div className="overflow-x-auto">
@@ -211,7 +211,7 @@ export function DigitalFinance() {
                 <tr>
                   <th className="px-6 py-4 text-left text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-left text-gray-900">Traditional Banking</th>
-                  <th className="px-6 py-4 text-left text-teal-600">Cynea Finance</th>
+                  <th className="px-6 py-4 text-left text-teal-600">Our Solution</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">

@@ -230,7 +230,7 @@ export function About() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <MapPin className="w-12 h-12 text-green-600 mb-4" />
-              <h3 className="text-gray-900 mb-2">Kenya (Nairobi)</h3>
+              <h3 className="text-gray-900 mb-2">Nairobi Hub</h3>
               <p className="text-gray-600 mb-4">
                 Talent Hub serving as our innovation center and primary operational base in East Africa.
               </p>
@@ -240,12 +240,12 @@ export function About() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <MapPin className="w-12 h-12 text-orange-600 mb-4" />
-              <h3 className="text-gray-900 mb-2">Zambia</h3>
+              <h3 className="text-gray-900 mb-2">Emerging Markets</h3>
               <p className="text-gray-600 mb-4">
-                Government partnership hub working with national institutions on AI workforce development and digital transformation.
+                Building the next generation of business leaders in through hands-on training and partnerships.
               </p>
               <p className="text-gray-700 text-sm">
-                Focus: Public sector training, national AI strategy
+                Focus: AI training, Workflow automation tools, Blockchain traceability
               </p>
             </div>
           </div>
@@ -264,9 +264,9 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-blue-50 p-6 rounded-lg">
               <Award className="w-10 h-10 text-[#072048] mb-3" />
-              <h4 className="text-gray-900 mb-2">Official Government Partner</h4>
+              <h4 className="text-gray-900 mb-2">Government Partners</h4>
               <p className="text-gray-600 text-sm mb-3">
-                Recognized training provider for Kenya School of Government and strategic partner to Zambian National Government for AI workforce development.
+                Recognized AI training solutions for AI workforce development and national strategy.
               </p>
               <div className="text-[#072048] text-sm">2024-Present</div>
             </div>

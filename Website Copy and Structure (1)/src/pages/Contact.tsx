@@ -132,24 +132,21 @@ export function Contact() {
                   <Mail className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:info@cynea.ai" className="text-gray-600 hover:text-blue-600">info@cynea.ai</a>
+                    <a href="mailto:irene@cynea.ai" className="text-gray-600 hover:text-blue-600">irene@cynea.ai</a>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+254 XXX XXX XXX (Kenya)</p>
-                    <p className="text-gray-600">+44 XXX XXX XXXX (UK)</p>
+                    <p className="text-gray-600">+44 7469 721021 (UK)</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900 mb-1">Locations</h4>
-                    <p className="text-gray-600 mb-2">Nairobi, Kenya (HQ)</p>
-                    <p className="text-gray-600 mb-2">London, United Kingdom</p>
-                    <p className="text-gray-600">Lusaka, Zambia</p>
+                    <p className="text-gray-600 mb-2">5 Merchant Square, London, UK</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +229,7 @@ export function Contact() {
                       <option value="sme">SME Solutions (AI, Blockchain, Finance)</option>
                       <option value="b2b-training">B2B Training Programs</option>
                       <option value="government">Government Partnerships</option>
-                      <option value="marketing">Marketing Academy</option>
+                      <option value="marketing">AI Upskilling</option>
                       <option value="talent">Talent Hub / Careers</option>
                       <option value="partnership">Partnership Opportunities</option>
                       <option value="other">Other</option>
@@ -357,7 +354,7 @@ export function Contact() {
                         <div>
                           <p className="font-semibold text-error-dark">Something went wrong</p>
                           <p className="text-sm text-error-dark">
-                            Please try again or email us directly at info@cynea.ai
+                            Please try again or email us directly at irene@cynea.ai
                           </p>
                         </div>
                       </div>
