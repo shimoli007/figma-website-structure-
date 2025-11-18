@@ -14,7 +14,7 @@ export function TalentHub() {
             </div>
             <h1 className="text-white mb-6">Nurturing the Next Generation of Tech Leaders</h1>
             <p className="text-amber-100 text-lg mb-8">
-              Our hub identifies the top 5% of East African tech talent from underprivileged communities and transform them into globally competitive engineers through expert training, real-world experience, and career opportunities.
+              Our hub identifies the top 5% of East African tech talent from underserved communities and transform them into globally competitive engineers through expert training, real-world experience, and career opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
