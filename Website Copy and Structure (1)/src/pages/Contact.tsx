@@ -109,11 +109,13 @@ export function Contact() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#6C2BD9] to-[#A855F7] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-white mb-6">Get in Touch</h1>
-            <p className="text-blue-100 text-lg">
+            <span className="tagline text-[#06B6D4] mb-4 block">CONTACT US</span>
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Get in Touch</h1>
+            <p className="text-[#CBD5E1] text-xl leading-relaxed">
               Whether you're an SME looking to transform your business, a government institution building AI capacity, or a talented innovator seeking opportunities—we'd love to hear from you.
             </p>
           </div>
@@ -126,37 +128,37 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="lg:col-span-1">
-              <h2 className="text-gray-900 mb-6">Contact Information</h2>
+              <h2 className="text-[#0F172A] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                  <Mail className="w-6 h-6 text-[#6C2BD9] mr-3 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:info@cynea.ai" className="text-gray-600 hover:text-blue-600">info@cynea.ai</a>
+                    <h4 className="text-[#0F172A] mb-1 font-semibold">Email</h4>
+                    <a href="mailto:info@cynea.ai" className="text-[#475569] hover:text-[#6C2BD9] transition-colors">info@cynea.ai</a>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                  <Phone className="w-6 h-6 text-[#06B6D4] mr-3 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+254 XXX XXX XXX (Kenya)</p>
-                    <p className="text-gray-600">+44 XXX XXX XXXX (UK)</p>
+                    <h4 className="text-[#0F172A] mb-1 font-semibold">Phone</h4>
+                    <p className="text-[#475569]">+254 XXX XXX XXX (Kenya)</p>
+                    <p className="text-[#475569]">+44 XXX XXX XXXX (UK)</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                  <MapPin className="w-6 h-6 text-[#FF6B35] mr-3 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="text-gray-900 mb-1">Locations</h4>
-                    <p className="text-gray-600 mb-2">Nairobi, Kenya (HQ)</p>
-                    <p className="text-gray-600 mb-2">London, United Kingdom</p>
-                    <p className="text-gray-600">Lusaka, Zambia</p>
+                    <h4 className="text-[#0F172A] mb-1 font-semibold">Locations</h4>
+                    <p className="text-[#475569] mb-2">Nairobi, Kenya (HQ)</p>
+                    <p className="text-[#475569] mb-2">London, United Kingdom</p>
+                    <p className="text-[#475569]">Lusaka, Zambia</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                <h4 className="text-gray-900 mb-2">Office Hours</h4>
-                <p className="text-gray-600 text-sm">
+              <div className="mt-8 p-6 bg-gradient-to-br from-[#6C2BD9]/5 to-[#A855F7]/10 rounded-lg border border-[#6C2BD9]/20">
+                <h4 className="text-[#0F172A] mb-2 font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Office Hours</h4>
+                <p className="text-[#475569] text-sm">
                   Monday - Friday: 9:00 AM - 6:00 PM EAT<br />
                   Saturday: 10:00 AM - 2:00 PM EAT<br />
                   Sunday: Closed
@@ -166,12 +168,12 @@ export function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-gray-900 mb-6">Send Us a Message</h2>
+              <div className="bg-gradient-to-br from-[#F8FAFC] to-[#EDE9FE] p-8 rounded-xl border border-[#6C2BD9]/10 shadow-lg">
+                <h2 className="text-[#0F172A] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-[#0F172A] mb-2 font-medium">
                         Full Name *
                       </label>
                       <input
@@ -181,12 +183,12 @@ export function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6C2BD9] focus:border-transparent bg-white"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-[#0F172A] mb-2 font-medium">
                         Email Address *
                       </label>
                       <input
@@ -196,14 +198,14 @@ export function Contact() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6C2BD9] focus:border-transparent bg-white"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-gray-700 mb-2">
+                    <label htmlFor="company" className="block text-[#0F172A] mb-2 font-medium">
                       Company/Organization
                     </label>
                     <input
@@ -212,13 +214,13 @@ export function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6C2BD9] focus:border-transparent bg-white"
                       placeholder="Your Company Name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="category" className="block text-gray-700 mb-2">
+                    <label htmlFor="category" className="block text-[#0F172A] mb-2 font-medium">
                       I'm interested in: *
                     </label>
                     <select
@@ -227,7 +229,7 @@ export function Contact() {
                       required
                       value={formData.category}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#6C2BD9] focus:border-transparent bg-white"
                     >
                       <option value="sme">SME Solutions (AI, Blockchain, Finance)</option>
                       <option value="b2b-training">B2B Training Programs</option>
@@ -240,7 +242,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-[#0F172A] mb-2 font-medium">
                       Message *
                     </label>
                     <textarea
@@ -250,7 +252,7 @@ export function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none ${
+                      className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#6C2BD9] focus:border-transparent resize-none bg-white ${
                         errors.message ? 'border-error' : 'border-gray-300'
                       }`}
                       placeholder="Tell us about your needs or questions..."
@@ -266,8 +268,8 @@ export function Contact() {
                   </div>
 
                   {/* GDPR Compliance Section */}
-                  <div className="space-y-4 bg-blue-50 p-4 rounded-lg border-2 border-blue-200">
-                    <h4 className="text-gray-900 font-semibold mb-3">Data Protection & Consent</h4>
+                  <div className="space-y-4 bg-gradient-to-br from-[#6C2BD9]/5 to-[#A855F7]/10 p-4 rounded-lg border-2 border-[#6C2BD9]/30">
+                    <h4 className="text-[#0F172A] font-semibold mb-3" style={{ fontFamily: 'var(--font-heading)' }}>Data Protection & Consent</h4>
 
                     {/* Required GDPR Consent */}
                     <div className="flex items-start">
@@ -368,7 +370,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={formState === 'submitting'}
-                    className="w-full md:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                    className="w-full md:w-auto bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-[#6C2BD9]/30 transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
                     data-loading={formState === 'submitting'}
                   >
                     {formState === 'submitting' ? (
@@ -394,28 +396,28 @@ export function Contact() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-[#F8FAFC] to-[#EDE9FE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-gray-900 mb-4">Looking for Something Specific?</h2>
-            <p className="text-gray-600">Quick links to help you find what you need</p>
+            <h2 className="text-[#0F172A] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>Looking for Something Specific?</h2>
+            <p className="text-[#475569]">Quick links to help you find what you need</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/products/ai-automation" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
-              <h4 className="text-gray-900 mb-2">Product Demo</h4>
-              <p className="text-gray-600 text-sm">Schedule a personalized demo of our platform</p>
+            <a href="/products/ai-automation" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center border border-[#6C2BD9]/10">
+              <h4 className="text-[#0F172A] mb-2 font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Product Demo</h4>
+              <p className="text-[#475569] text-sm">Schedule a personalized demo of our platform</p>
             </a>
-            <a href="/training/b2b" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
-              <h4 className="text-gray-900 mb-2">Training Programs</h4>
-              <p className="text-gray-600 text-sm">Explore our corporate and government training</p>
+            <a href="/training/b2b" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center border border-[#06B6D4]/10">
+              <h4 className="text-[#0F172A] mb-2 font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Training Programs</h4>
+              <p className="text-[#475569] text-sm">Explore our corporate and government training</p>
             </a>
-            <a href="/talent-hub" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
-              <h4 className="text-gray-900 mb-2">Join Talent Hub</h4>
-              <p className="text-gray-600 text-sm">Apply to our Nairobi talent development program</p>
+            <a href="/talent-hub" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center border border-[#A855F7]/10">
+              <h4 className="text-[#0F172A] mb-2 font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Join Talent Hub</h4>
+              <p className="text-[#475569] text-sm">Apply to our Nairobi talent development program</p>
             </a>
-            <a href="/resources" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition text-center">
-              <h4 className="text-gray-900 mb-2">Resources</h4>
-              <p className="text-gray-600 text-sm">Access guides, whitepapers, and research</p>
+            <a href="/resources" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center border border-[#FF6B35]/10">
+              <h4 className="text-[#0F172A] mb-2 font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Resources</h4>
+              <p className="text-[#475569] text-sm">Access guides, whitepapers, and research</p>
             </a>
           </div>
         </div>
