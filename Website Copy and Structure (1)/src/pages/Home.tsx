@@ -5,8 +5,26 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 export function Home() {
   return (
     <div className="bg-white">
-      {/* Hero Section - Bold & Innovative */}
+      {/* Hero Section - Bold & Innovative with Video Background */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white min-h-[90vh] flex items-center">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-20"
+            style={{ filter: 'brightness(0.7) contrast(1.2)' }}
+          >
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />
+            {/* Fallback gradient if video doesn't load */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]"></div>
+          </video>
+          {/* Dark overlay for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A]/80 via-[#1E293B]/70 to-[#0F172A]/80"></div>
+        </div>
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 dot-grid"></div>
         <div className="absolute inset-0 gradient-mesh"></div>
