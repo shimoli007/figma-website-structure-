@@ -6,27 +6,28 @@ export function TalentHub() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-600 to-orange-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#6C2BD9] to-[#A855F7] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-amber-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Cynea Talent Hub, Nairobi</span>
+            <div className="inline-block bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] px-4 py-2 rounded-full mb-6 shadow-md">
+              <span className="text-sm text-white font-medium">Cynea Talent Hub, Nairobi</span>
             </div>
-            <h1 className="text-white mb-6">Nurturing the Next Generation of Tech Leaders</h1>
-            <p className="text-amber-100 text-lg mb-8">
+            <h1 className="text-5xl md:text-6xl font-black text-white mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Nurturing the Next Generation of Tech Leaders</h1>
+            <p className="text-[#CBD5E1] text-xl leading-relaxed mb-8">
               We're building more than software—we're building the next generation of tech talent. Our hub identifies, trains, and empowers the top 5% of innovators, with a focus on supporting talented youths from underprivileged communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-50 transition"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] text-white px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-[#FF6B35]/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
               >
                 Partner With Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-amber-600 transition"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#6C2BD9] transition-all duration-300 hover:-translate-y-0.5 font-semibold"
               >
                 Apply for Talent Program
               </Link>
@@ -47,9 +48,9 @@ export function TalentHub() {
               <p className="text-gray-600 mb-6">
                 We identify brilliant young developers, designers, and product managers—particularly from underprivileged communities—and provide them with real-world projects, mentorship from industry leaders, and a pathway to meaningful careers in tech.
               </p>
-              <div className="bg-amber-50 border-l-4 border-amber-600 p-4 rounded">
+              <div className="bg-gradient-to-br from-[#FF6B35]/5 to-[#FF8C61]/10 border-l-4 border-[#FF6B35] p-4 rounded">
                 <p className="text-gray-700">
-                  <span className="text-amber-700">Our commitment:</span> Every hub member works on live projects that serve real SMEs, gaining experience while building solutions that matter.
+                  <span className="text-[#FF8C61]">Our commitment:</span> Every hub member works on live projects that serve real SMEs, gaining experience while building solutions that matter.
                 </p>
               </div>
             </div>
@@ -75,7 +76,7 @@ export function TalentHub() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Users className="w-12 h-12 text-amber-600 mb-4" />
+              <Users className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Real-World Projects</h3>
               <p className="text-gray-600 mb-4">
                 Work on live Cynea AI projects serving SMEs globally, from AI automation to blockchain traceability.
@@ -97,7 +98,7 @@ export function TalentHub() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Award className="w-12 h-12 text-amber-600 mb-4" />
+              <Award className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Expert Mentorship</h3>
               <p className="text-gray-600 mb-4">
                 Learn directly from Cynea's founders and experienced engineers who have built systems at scale.
@@ -119,7 +120,7 @@ export function TalentHub() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <TrendingUp className="w-12 h-12 text-amber-600 mb-4" />
+              <TrendingUp className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Skills Development</h3>
               <p className="text-gray-600 mb-4">
                 Continuous learning opportunities in cutting-edge technologies and methodologies.
@@ -141,7 +142,7 @@ export function TalentHub() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Heart className="w-12 h-12 text-amber-600 mb-4" />
+              <Heart className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Community & Network</h3>
               <p className="text-gray-600 mb-4">
                 Join a tight-knit community of ambitious peers who push each other to excellence.
@@ -163,7 +164,7 @@ export function TalentHub() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Star className="w-12 h-12 text-amber-600 mb-4" />
+              <Star className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Career Opportunities</h3>
               <p className="text-gray-600 mb-4">
                 High-performing hub members are offered full-time positions at Cynea or partner companies.
@@ -185,7 +186,7 @@ export function TalentHub() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Award className="w-12 h-12 text-amber-600 mb-4" />
+              <Award className="w-12 h-12 text-[#FF6B35] mb-4" />
               <h3 className="text-gray-900 mb-3">Support & Resources</h3>
               <p className="text-gray-600 mb-4">
                 Everything you need to succeed while you learn and grow with us.
@@ -220,32 +221,32 @@ export function TalentHub() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-amber-600 mb-3">Full-Stack Developer</div>
+              <div className="text-[#FF6B35] mb-3">Full-Stack Developer</div>
               <p className="text-gray-600 mb-4 text-sm">
                 Started as intern, now leads development for our blockchain traceability platform serving 50+ exporters.
               </p>
               <div className="flex items-center text-sm text-gray-600">
-                <Award className="w-4 h-4 text-amber-600 mr-1" />
+                <Award className="w-4 h-4 text-[#FF6B35] mr-1" />
                 <span>Now: Senior Engineer at Cynea</span>
               </div>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-amber-600 mb-3">AI/ML Engineer</div>
+              <div className="text-[#FF6B35] mb-3">AI/ML Engineer</div>
               <p className="text-gray-600 mb-4 text-sm">
                 Joined hub with basic Python skills, now builds AI models for customer service automation used by 100+ SMEs.
               </p>
               <div className="flex items-center text-sm text-gray-600">
-                <Award className="w-4 h-4 text-amber-600 mr-1" />
+                <Award className="w-4 h-4 text-[#FF6B35] mr-1" />
                 <span>Now: ML Engineer at Cynea</span>
               </div>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="text-amber-600 mb-3">Product Designer</div>
+              <div className="text-[#FF6B35] mb-3">Product Designer</div>
               <p className="text-gray-600 mb-4 text-sm">
                 Designed user interfaces for our SME dashboard, then got recruited by major UK fintech with our recommendation.
               </p>
               <div className="flex items-center text-sm text-gray-600">
-                <Award className="w-4 h-4 text-amber-600 mr-1" />
+                <Award className="w-4 h-4 text-[#FF6B35] mr-1" />
                 <span>Now: Senior Designer, London</span>
               </div>
             </div>
@@ -264,7 +265,7 @@ export function TalentHub() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-amber-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">1</span>
               </div>
               <h4 className="text-gray-900 mb-2">Technical Assessment</h4>
@@ -273,7 +274,7 @@ export function TalentHub() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-amber-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">2</span>
               </div>
               <h4 className="text-gray-900 mb-2">Problem-Solving</h4>
@@ -282,7 +283,7 @@ export function TalentHub() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-amber-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">3</span>
               </div>
               <h4 className="text-gray-900 mb-2">Cultural Fit</h4>
@@ -291,7 +292,7 @@ export function TalentHub() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-amber-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">4</span>
               </div>
               <h4 className="text-gray-900 mb-2">Growth Mindset</h4>
@@ -318,7 +319,7 @@ export function TalentHub() {
               <p className="text-gray-600 mb-4 text-sm">
                 Get introductions to high-performing hub members ready for full-time roles
               </p>
-              <Link to="/contact" className="text-amber-600 hover:text-amber-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#FF6B35] hover:text-[#FF8C61] inline-flex items-center">
                 Learn More <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
@@ -327,7 +328,7 @@ export function TalentHub() {
               <p className="text-gray-600 mb-4 text-sm">
                 Support the next generation of innovators through equipment or training sponsorship
               </p>
-              <Link to="/contact" className="text-amber-600 hover:text-amber-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#FF6B35] hover:text-[#FF8C61] inline-flex items-center">
                 Partner With Us <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
@@ -336,7 +337,7 @@ export function TalentHub() {
               <p className="text-gray-600 mb-4 text-sm">
                 Share your expertise with emerging talent through our mentorship program
               </p>
-              <Link to="/contact" className="text-amber-600 hover:text-amber-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#FF6B35] hover:text-[#FF8C61] inline-flex items-center">
                 Become a Mentor <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
@@ -345,28 +346,29 @@ export function TalentHub() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Join the Cynea Talent Hub</h2>
-          <p className="text-amber-100 mb-8 text-lg">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#6C2BD9] to-[#A855F7] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-4" style={{ fontFamily: 'var(--font-heading)' }}>Join the Cynea Talent Hub</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             If you're a passionate developer, designer, or product manager from any background, we want to hear from you. We especially encourage applications from underprivileged communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-amber-600 px-8 py-3 rounded-lg hover:bg-amber-50 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] text-white px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-[#FF6B35]/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
             >
               Apply Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-amber-600 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#6C2BD9] transition-all duration-300 hover:-translate-y-0.5 font-semibold"
             >
               Partner With Us
             </Link>
           </div>
-          <p className="mt-6 text-amber-100 text-sm">
+          <p className="mt-6 text-[#CBD5E1] text-sm">
             Applications accepted on a rolling basis • Remote and in-person options available
           </p>
         </div>
