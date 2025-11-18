@@ -12,6 +12,7 @@ import { B2BTraining } from './pages/training/B2BTraining';
 import { GovernmentPrograms } from './pages/training/GovernmentPrograms';
 import { MarketingAcademy } from './pages/training/MarketingAcademy';
 import { TalentHub } from './pages/TalentHub';
+import { AIForGood } from './pages/AIForGood';
 import { About } from './pages/About';
 import { UseCases } from './pages/UseCases';
 import { Resources } from './pages/Resources';
@@ -47,8 +48,11 @@ export default function App() {
             <Route path="/training/government" element={<GovernmentPrograms />} />
             <Route path="/training/marketing" element={<MarketingAcademy />} />
 
+            {/* Impact Routes */}
+            <Route path="/impact/talent-hub" element={<TalentHub />} />
+            <Route path="/impact/ai-for-good" element={<AIForGood />} />
+
             {/* Other Pages */}
-            <Route path="/talent-hub" element={<TalentHub />} />
             <Route path="/about" element={<About />} />
             <Route path="/use-cases" element={<UseCases />} />
             <Route path="/resources" element={<Resources />} />

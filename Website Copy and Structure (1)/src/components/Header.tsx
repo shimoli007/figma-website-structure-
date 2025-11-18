@@ -6,6 +6,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [trainingOpen, setTrainingOpen] = useState(false);
+  const [impactOpen, setImpactOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -64,7 +65,7 @@ export function Header() {
             </div>
 
             <div className="relative group">
-              <button 
+              <button
                 className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition"
                 onMouseEnter={() => setTrainingOpen(true)}
                 onMouseLeave={() => setTrainingOpen(false)}
@@ -73,7 +74,7 @@ export function Header() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {trainingOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
                   onMouseEnter={() => setTrainingOpen(true)}
                   onMouseLeave={() => setTrainingOpen(false)}
@@ -94,14 +95,38 @@ export function Header() {
               )}
             </div>
 
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition"
+                onMouseEnter={() => setImpactOpen(true)}
+                onMouseLeave={() => setImpactOpen(false)}
+              >
+                <span>Impact</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              {impactOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
+                  onMouseEnter={() => setImpactOpen(true)}
+                  onMouseLeave={() => setImpactOpen(false)}
+                >
+                  <Link to="/impact/talent-hub" className="block px-4 py-2 hover:bg-gray-50">
+                    <div className="font-medium text-gray-900">Talent Hub</div>
+                    <div className="text-sm text-gray-500">Nurturing the next generation of tech leaders</div>
+                  </Link>
+                  <Link to="/impact/ai-for-good" className="block px-4 py-2 hover:bg-gray-50">
+                    <div className="font-medium text-gray-900">AI for Good</div>
+                    <div className="text-sm text-gray-500">Technology solutions that put people first</div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link to="/use-cases" className={`${isActive('/use-cases') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
               Use Cases
             </Link>
             <Link to="/about" className={`${isActive('/about') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
               About
-            </Link>
-            <Link to="/talent-hub" className={`${isActive('/talent-hub') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
-              Talent Hub
             </Link>
             <Link to="/resources" className={`${isActive('/resources') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
               Industry Insights
@@ -159,14 +184,22 @@ export function Header() {
                   </Link>
                 </div>
               </div>
+              <div>
+                <div className="text-gray-900 mb-2">Impact</div>
+                <div className="pl-4 space-y-2">
+                  <Link to="/impact/talent-hub" className="block text-gray-600 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
+                    Talent Hub
+                  </Link>
+                  <Link to="/impact/ai-for-good" className="block text-gray-600 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
+                    AI for Good
+                  </Link>
+                </div>
+              </div>
               <Link to="/use-cases" className="block text-gray-700 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
                 Use Cases
               </Link>
               <Link to="/about" className="block text-gray-700 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
                 About
-              </Link>
-              <Link to="/talent-hub" className="block text-gray-700 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
-                Talent Hub
               </Link>
               <Link to="/resources" className="block text-gray-700 hover:text-[#072048]" onClick={() => setIsOpen(false)}>
                 Industry Insights
