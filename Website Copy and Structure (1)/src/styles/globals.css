@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -6,26 +6,48 @@
   /* Base Font Size */
   --font-size: 16px;
 
-  /* Brand Colors */
+  /* Deep Tech Color Palette */
   --background: #ffffff;
-  --foreground: #1e293b;
+  --foreground: #0F172A;
   --card: #ffffff;
-  --card-foreground: #1e293b;
+  --card-foreground: #0F172A;
   --popover: #ffffff;
-  --popover-foreground: #1e293b;
-  --primary: #072048;
+  --popover-foreground: #0F172A;
+
+  /* Primary: Deep Purple → Electric Purple */
+  --primary: #6C2BD9;
+  --primary-light: #A855F7;
   --primary-foreground: #ffffff;
-  --primary-hover: #0a2d5f;
-  --secondary: #5b1fa3;
+  --primary-hover: #5a24b8;
+  --primary-gradient: linear-gradient(135deg, #6C2BD9 0%, #A855F7 100%);
+
+  /* Secondary: Cyber Teal */
+  --secondary: #06B6D4;
   --secondary-foreground: #ffffff;
-  --secondary-hover: #4a1882;
-  --accent: #eca52e;
-  --accent-foreground: #072048;
-  --accent-hover: #d69429;
-  --accent-dark: #b87a1f;
-  --tertiary: #9333ea;
-  --tertiary-foreground: #ffffff;
-  --tertiary-hover: #7c29c4;
+  --secondary-hover: #0891b2;
+  --secondary-dark: #0e7490;
+
+  /* Accent: Neon Orange */
+  --accent: #FF6B35;
+  --accent-foreground: #ffffff;
+  --accent-hover: #ff5520;
+  --accent-dark: #e05a2f;
+
+  /* Dark: Rich Navy */
+  --dark: #0F172A;
+  --dark-foreground: #ffffff;
+
+  /* Neutral: Cool Gray Scale */
+  --neutral-50: #F8FAFC;
+  --neutral-100: #F1F5F9;
+  --neutral-200: #E2E8F0;
+  --neutral-300: #CBD5E1;
+  --neutral-400: #94A3B8;
+  --neutral-500: #64748B;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1E293B;
+  --neutral-900: #0F172A;
 
   /* Semantic Colors - Success */
   --success: #10b981;
@@ -58,19 +80,29 @@
   --info-hover: #2563eb;
 
   /* Neutral Colors */
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --border: #E2E8F0;
   --input: transparent;
-  --input-background: #f8fafc;
-  --input-border: #cbd5e1;
-  --switch-background: #cbd5e1;
-  --disabled: #9ca3af;
-  --disabled-background: #f3f4f6;
+  --input-background: #F8FAFC;
+  --input-border: #CBD5E1;
+  --switch-background: #CBD5E1;
+  --disabled: #9CA3AF;
+  --disabled-background: #F3F4F6;
 
   /* Focus & Ring */
-  --ring: #3b82f6;
+  --ring: #A855F7;
   --ring-offset: #ffffff;
+
+  /* Glass Morphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 20px;
+
+  /* Glow Effects */
+  --glow-primary: 0 0 20px rgba(108, 43, 217, 0.3);
+  --glow-secondary: 0 0 20px rgba(6, 182, 212, 0.3);
+  --glow-accent: 0 0 20px rgba(255, 107, 53, 0.3);
 
   /* Shadows */
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -99,24 +131,41 @@
   --spacing-3xl: 4rem;
   --spacing-4xl: 6rem;
 
+  /* Typography - Fonts */
+  --font-heading: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
   /* Typography - Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 
-  /* Typography - Font Sizes */
+  /* Typography - Font Sizes (Desktop) */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+  --font-size-6xl: 4.5rem;
+
+  /* Hero Sizes */
+  --hero-desktop: 4.5rem;
+  --hero-mobile: 3rem;
+  --h1-desktop: 3.5rem;
+  --h1-mobile: 2.5rem;
+  --h2-desktop: 2.5rem;
+  --h2-mobile: 2rem;
+  --h3-desktop: 2rem;
+  --h3-mobile: 1.75rem;
+  --h4-desktop: 1.5rem;
+  --h4-mobile: 1.5rem;
 
   /* Transitions */
   --transition-fast: 150ms;
@@ -231,55 +280,121 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
 
-/**
- * Enhanced Typography Hierarchy
- * Implements improved visual hierarchy for corporate B2B/B2G audiences
- */
+/* ===================================
+   BACKGROUND TREATMENTS
+   =================================== */
+
+/* Dot Grid Pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--neutral-300) 2px, transparent 2px);
+  background-size: 24px 24px;
+  opacity: 0.05;
+}
+
+/* Gradient Mesh Background */
+.gradient-mesh {
+  background: radial-gradient(ellipse at top left, rgba(108, 43, 217, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at top right, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at bottom, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+}
+
+/* Geometric Shapes Overlay */
+.geometric-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.geometric-bg::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 40%;
+  height: 60%;
+  background: linear-gradient(135deg, rgba(108, 43, 217, 0.03) 0%, transparent 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: 0;
+}
+
+.geometric-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 35%;
+  height: 50%;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, transparent 100%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  z-index: 0;
+}
+
+/* Glass Morphism Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), var(--glow-primary);
+}
+
+/* ===================================
+   TYPOGRAPHY SYSTEM
+   =================================== */
+
+/* Enhanced Typography Hierarchy */
 @layer base {
   :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
     h1 {
-      font-size: var(--font-size-5xl);
+      font-family: var(--font-heading);
+      font-size: var(--h1-desktop);
       font-weight: var(--font-weight-extrabold);
-      line-height: 1.2;
+      line-height: 1.1;
       letter-spacing: -0.02em;
-      color: var(--primary);
-      margin-bottom: 1rem;
+      color: var(--dark);
+      margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: var(--font-size-4xl);
+      font-family: var(--font-heading);
+      font-size: var(--h2-desktop);
       font-weight: var(--font-weight-bold);
-      line-height: 1.3;
+      line-height: 1.2;
       letter-spacing: -0.01em;
-      color: var(--primary);
-      margin-bottom: 0.875rem;
+      color: var(--dark);
+      margin-bottom: 1.25rem;
     }
 
     h3 {
-      font-size: var(--font-size-3xl);
+      font-family: var(--font-heading);
+      font-size: var(--h3-desktop);
       font-weight: var(--font-weight-bold);
-      line-height: 1.4;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 1rem;
     }
 
     h4 {
-      font-size: var(--font-size-2xl);
+      font-family: var(--font-heading);
+      font-size: var(--h4-desktop);
       font-weight: var(--font-weight-semibold);
       line-height: 1.4;
-      color: var(--primary);
-      margin-bottom: 0.625rem;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
     }
 
     h5 {
+      font-family: var(--font-heading);
       font-size: var(--font-size-xl);
       font-weight: var(--font-weight-semibold);
       line-height: 1.5;
@@ -288,6 +403,7 @@
     }
 
     h6 {
+      font-family: var(--font-heading);
       font-size: var(--font-size-lg);
       font-weight: var(--font-weight-semibold);
       line-height: 1.5;
@@ -295,8 +411,16 @@
       margin-bottom: 0.5rem;
     }
 
+    /* Body Large */
+    p.large {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      font-weight: var(--font-weight-normal);
+    }
+
     p {
-      font-size: var(--font-size-base);
+      font-family: var(--font-body);
+      font-size: 1.125rem;
       font-weight: var(--font-weight-normal);
       line-height: 1.6;
       color: var(--foreground);
@@ -304,6 +428,7 @@
     }
 
     label {
+      font-family: var(--font-body);
       font-size: var(--font-size-sm);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
@@ -313,14 +438,16 @@
     }
 
     button {
-      font-size: var(--font-size-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
       font-weight: var(--font-weight-semibold);
       line-height: 1;
       letter-spacing: 0.01em;
     }
 
     input, textarea, select {
-      font-size: var(--font-size-sm);
+      font-family: var(--font-body);
+      font-size: 1rem;
       font-weight: var(--font-weight-normal);
       line-height: 1.5;
       color: var(--foreground);
@@ -338,7 +465,7 @@
     }
 
     a:focus-visible {
-      outline: 2px solid var(--ring);
+      outline: 3px solid var(--ring);
       outline-offset: 2px;
       border-radius: 2px;
     }
@@ -348,22 +475,44 @@
   @media (max-width: 768px) {
     :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
       h1 {
-        font-size: var(--font-size-4xl);
+        font-size: var(--h1-mobile);
       }
 
       h2 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--h2-mobile);
       }
 
       h3 {
-        font-size: var(--font-size-2xl);
+        font-size: var(--h3-mobile);
       }
 
       h4 {
-        font-size: var(--font-size-xl);
+        font-size: var(--h4-mobile);
+      }
+
+      p {
+        font-size: 1rem;
       }
     }
   }
+}
+
+/* Special Typography Treatments */
+.tagline {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 html {
@@ -578,6 +727,126 @@ select[aria-invalid="true"]:focus {
 }
 
 /* ===================================
+   ANIMATIONS & INTERACTIONS
+   =================================== */
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glow Pulse */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(108, 43, 217, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(108, 43, 217, 0.6);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Stagger Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Hover Lift Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Hover Glow */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 43, 217, 0.3);
+}
+
+/* Underline Slide In */
+.underline-slide {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-slide::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.underline-slide:hover::after {
+  width: 100%;
+}
+
+/* Parallax Container */
+.parallax {
+  transition: transform 0.3s ease-out;
+}
+
+/* ===================================
    REDUCED MOTION PREFERENCE
    =================================== */
 
@@ -589,6 +858,15 @@ select[aria-invalid="true"]:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .animate-fade-up,
+  .animate-fade-in,
+  .animate-scale-in,
+  .animate-glow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
