@@ -6,20 +6,21 @@ export function GovernmentPrograms() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-600 to-teal-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#06B6D4] to-[#22D3EE] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-emerald-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Government AI Training Programs</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#06B6D4]/20 to-[#22D3EE]/20 border border-[#06B6D4]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#E0F2FE]">Government AI Training Programs</span>
             </div>
-            <h1 className="text-white mb-6">National AI Workforce Development</h1>
-            <p className="text-emerald-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>National AI Workforce Development</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Partner with us to build AI-ready public sectors and empower citizens with the skills needed for the digital economy. Trusted by government institutions across Africa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50 transition"
+                className="inline-flex items-center justify-center bg-white text-[#06B6D4] px-6 py-3 rounded-lg hover:bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 transition"
               >
                 Discuss Partnership
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -39,45 +40,45 @@ export function GovernmentPrograms() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-emerald-50 border-2 border-emerald-600 p-8 rounded-xl">
-              <Building2 className="w-12 h-12 text-emerald-600 mb-4" />
+            <div className="bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 border-2 border-[#06B6D4] p-8 rounded-xl">
+              <Building2 className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Kenya School of Government</h3>
               <p className="text-gray-600 mb-4">
                 Official training partner delivering AI readiness programs for Kenyan public sector leaders and administrators.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>250+ government officials trained</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>15 ministries and departments reached</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>Ongoing curriculum development</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-emerald-50 border-2 border-emerald-600 p-8 rounded-xl">
-              <Building2 className="w-12 h-12 text-emerald-600 mb-4" />
+            <div className="bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 border-2 border-[#06B6D4] p-8 rounded-xl">
+              <Building2 className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Zambian National Government</h3>
               <p className="text-gray-600 mb-4">
                 Strategic engagement to develop national AI workforce strategy and implementation framework.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>National AI strategy consultation</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>Public sector training programs</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-4 h-4 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#06B6D4] mr-2 mt-0.5 flex-shrink-0" />
                   <span>Digital transformation roadmap</span>
                 </li>
               </ul>
@@ -97,7 +98,7 @@ export function GovernmentPrograms() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <GraduationCap className="w-12 h-12 text-emerald-600 mb-4" />
+              <GraduationCap className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Public Sector AI Readiness</h3>
               <p className="text-gray-600 mb-4">
                 Executive training for ministers, permanent secretaries, and senior officials on AI's potential for public service delivery.
@@ -121,12 +122,12 @@ export function GovernmentPrograms() {
                 </li>
               </ul>
               <div className="text-sm text-gray-600">
-                <span className="text-emerald-600">Target:</span> Senior leadership | <span className="text-emerald-600">Duration:</span> 2-3 days
+                <span className="text-[#06B6D4]">Target:</span> Senior leadership | <span className="text-[#06B6D4]">Duration:</span> 2-3 days
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Users className="w-12 h-12 text-emerald-600 mb-4" />
+              <Users className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Ministry Training Partnerships</h3>
               <p className="text-gray-600 mb-4">
                 Department-specific AI training programs for line ministries looking to digitize operations and improve efficiency.
@@ -150,12 +151,12 @@ export function GovernmentPrograms() {
                 </li>
               </ul>
               <div className="text-sm text-gray-600">
-                <span className="text-emerald-600">Target:</span> Ministry teams | <span className="text-emerald-600">Duration:</span> 4-12 weeks
+                <span className="text-[#06B6D4]">Target:</span> Ministry teams | <span className="text-[#06B6D4]">Duration:</span> 4-12 weeks
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Shield className="w-12 h-12 text-emerald-600 mb-4" />
+              <Shield className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">National AI Workforce Strategy</h3>
               <p className="text-gray-600 mb-4">
                 Comprehensive consultation and planning services to develop national AI skills development frameworks.
@@ -179,12 +180,12 @@ export function GovernmentPrograms() {
                 </li>
               </ul>
               <div className="text-sm text-gray-600">
-                <span className="text-emerald-600">Target:</span> National governments | <span className="text-emerald-600">Duration:</span> 6-12 months
+                <span className="text-[#06B6D4]">Target:</span> National governments | <span className="text-[#06B6D4]">Duration:</span> 6-12 months
               </div>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Award className="w-12 h-12 text-emerald-600 mb-4" />
+              <Award className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Citizen AI Literacy Programs</h3>
               <p className="text-gray-600 mb-4">
                 Mass training initiatives to build AI awareness and basic skills among the general population.
@@ -208,7 +209,7 @@ export function GovernmentPrograms() {
                 </li>
               </ul>
               <div className="text-sm text-gray-600">
-                <span className="text-emerald-600">Target:</span> General public | <span className="text-emerald-600">Duration:</span> Ongoing
+                <span className="text-[#06B6D4]">Target:</span> General public | <span className="text-[#06B6D4]">Duration:</span> Ongoing
               </div>
             </div>
           </div>
@@ -281,22 +282,22 @@ export function GovernmentPrograms() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-emerald-600 mb-2">250+</div>
+              <div className="text-[#06B6D4] mb-2">250+</div>
               <div className="text-gray-900 mb-1">Officials Trained</div>
               <p className="text-gray-600 text-sm">Across Kenya and Zambia</p>
             </div>
             <div className="text-center">
-              <div className="text-emerald-600 mb-2">15</div>
+              <div className="text-[#06B6D4] mb-2">15</div>
               <div className="text-gray-900 mb-1">Ministries Reached</div>
               <p className="text-gray-600 text-sm">Multiple departments per ministry</p>
             </div>
             <div className="text-center">
-              <div className="text-emerald-600 mb-2">2</div>
+              <div className="text-[#06B6D4] mb-2">2</div>
               <div className="text-gray-900 mb-1">National Partnerships</div>
               <p className="text-gray-600 text-sm">Kenya and Zambia governments</p>
             </div>
             <div className="text-center">
-              <div className="text-emerald-600 mb-2">95%</div>
+              <div className="text-[#06B6D4] mb-2">95%</div>
               <div className="text-gray-900 mb-1">Satisfaction Rate</div>
               <p className="text-gray-600 text-sm">From participant feedback</p>
             </div>
@@ -305,22 +306,23 @@ export function GovernmentPrograms() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Build Your Nation's AI Capabilities</h2>
-          <p className="text-emerald-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#06B6D4] to-[#22D3EE] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Build Your Nation's AI Capabilities</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Partner with Cynea AI to develop a comprehensive AI workforce strategy for your country or institution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-emerald-600 px-8 py-3 rounded-lg hover:bg-emerald-50 transition"
+              className="inline-flex items-center justify-center bg-white text-[#06B6D4] px-8 py-3 rounded-lg hover:bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 transition"
             >
               Discuss Partnership Opportunities
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
-          <p className="mt-6 text-emerald-100 text-sm">
+          <p className="mt-6 text-[#CBD5E1] text-sm">
             Flexible engagement models • Multi-year partnerships available • Train-the-trainer options
           </p>
         </div>

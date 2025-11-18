@@ -6,27 +6,28 @@ export function CareerGrowth() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#eca52e] to-[#9333ea] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#FF6B35] to-[#FF8C61] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-[#eca52e] bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Career Growth Programs</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#FF6B35]/20 to-[#FF8C61]/20 border border-[#FF6B35]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#FFF7ED]">Career Growth Programs</span>
             </div>
-            <h1 className="text-white mb-6">AI Literacy & Upskilling for Professionals</h1>
-            <p className="text-amber-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>AI Literacy & Upskilling for Professionals</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Advance your career with cutting-edge AI training. From foundational concepts to specialized skills in marketing and data science—transform your professional trajectory.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-[#eca52e] px-6 py-3 rounded-lg hover:bg-amber-50 transition"
+                className="inline-flex items-center justify-center bg-white text-[#FF6B35] px-6 py-3 rounded-lg hover:bg-amber-50 transition"
               >
                 Enroll Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 to="/use-cases" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#eca52e] transition"
+                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#FF6B35] transition"
               >
                 Success Stories
               </Link>
@@ -48,7 +49,7 @@ export function CareerGrowth() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* AI Literacy Course */}
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
-              <div className="bg-[#072048] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-gray-900 mb-4">1. AI Literacy Course</h3>
@@ -93,33 +94,33 @@ export function CareerGrowth() {
               <div className="bg-white p-4 rounded-lg mb-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <div className="text-[#072048]">Duration</div>
+                    <div className="text-[#0F172A]">Duration</div>
                     <div className="text-gray-600 text-sm">4-6 weeks</div>
                   </div>
                   <div>
-                    <div className="text-[#072048]">Format</div>
+                    <div className="text-[#0F172A]">Format</div>
                     <div className="text-gray-600 text-sm">Online + Live Sessions</div>
                   </div>
                   <div>
-                    <div className="text-[#072048]">Level</div>
+                    <div className="text-[#0F172A]">Level</div>
                     <div className="text-gray-600 text-sm">Beginner-Friendly</div>
                   </div>
                   <div>
-                    <div className="text-[#072048]">Certificate</div>
+                    <div className="text-[#0F172A]">Certificate</div>
                     <div className="text-gray-600 text-sm">Upon Completion</div>
                   </div>
                 </div>
               </div>
 
-              <Link to="/contact" className="inline-flex items-center text-[#072048] hover:text-[#eca52e]">
+              <Link to="/contact" className="inline-flex items-center text-[#0F172A] hover:text-[#FF6B35]">
                 Learn More <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
 
             {/* Upskilling Programs */}
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl">
-              <div className="bg-[#eca52e] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-[#072048]" />
+              <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-[#0F172A]" />
               </div>
               <h3 className="text-gray-900 mb-4">2. Professional Upskilling</h3>
               <p className="text-gray-600 mb-6">
@@ -132,7 +133,7 @@ export function CareerGrowth() {
                 {/* Marketing Track */}
                 <div className="bg-white p-4 rounded-lg">
                   <h5 className="text-gray-900 mb-2 flex items-center">
-                    <span className="bg-[#eca52e] text-white px-2 py-1 rounded text-xs mr-2">TRACK A</span>
+                    <span className="bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] text-white px-2 py-1 rounded text-xs mr-2">TRACK A</span>
                     AI-Powered Marketing
                   </h5>
                   <ul className="space-y-2">
@@ -165,7 +166,7 @@ export function CareerGrowth() {
                 {/* Data Science Track */}
                 <div className="bg-white p-4 rounded-lg">
                   <h5 className="text-gray-900 mb-2 flex items-center">
-                    <span className="bg-[#5b1fa3] text-white px-2 py-1 rounded text-xs mr-2">TRACK B</span>
+                    <span className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white px-2 py-1 rounded text-xs mr-2">TRACK B</span>
                     Data Science & Analytics
                   </h5>
                   <ul className="space-y-2">
@@ -197,7 +198,7 @@ export function CareerGrowth() {
               </div>
 
               <div className="mt-6">
-                <Link to="/contact" className="inline-flex items-center text-[#eca52e] hover:text-[#9333ea]">
+                <Link to="/contact" className="inline-flex items-center text-[#FF6B35] hover:text-[#A855F7]">
                   Explore Tracks <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
               </div>
@@ -217,25 +218,25 @@ export function CareerGrowth() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-[#eca52e] mb-3">Marketing Manager → AI Marketing Lead</div>
+              <div className="text-[#FF6B35] mb-3">Marketing Manager → AI Marketing Lead</div>
               <p className="text-gray-600 mb-4 text-sm">
                 Completed AI-Powered Marketing track, now manages automated campaigns generating 3x more leads at half the cost.
               </p>
-              <div className="text-[#072048]">+85% salary increase</div>
+              <div className="text-[#0F172A]">+85% salary increase</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-[#eca52e] mb-3">Business Analyst → Data Scientist</div>
+              <div className="text-[#FF6B35] mb-3">Business Analyst → Data Scientist</div>
               <p className="text-gray-600 mb-4 text-sm">
                 After Data Science track, transitioned to predictive modeling role at fintech startup.
               </p>
-              <div className="text-[#072048]">+120% salary increase</div>
+              <div className="text-[#0F172A]">+120% salary increase</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="text-[#eca52e] mb-3">Small Business Owner → AI Consultant</div>
+              <div className="text-[#FF6B35] mb-3">Small Business Owner → AI Consultant</div>
               <p className="text-gray-600 mb-4 text-sm">
                 Used AI Literacy knowledge to start consulting practice, now advising 12 SMEs on AI adoption.
               </p>
-              <div className="text-[#072048]">New revenue stream</div>
+              <div className="text-[#0F172A]">New revenue stream</div>
             </div>
           </div>
         </div>
@@ -249,7 +250,7 @@ export function CareerGrowth() {
               <h2 className="text-gray-900 mb-6">Why Cynea Career Programs Stand Out</h2>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="bg-[#eca52e] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-gradient-to-r from-[#FF6B35] to-[#FF8C61] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Lightbulb className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -260,7 +261,7 @@ export function CareerGrowth() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-[#5b1fa3] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Users className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -271,7 +272,7 @@ export function CareerGrowth() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-[#9333ea] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-gradient-to-r from-[#A855F7] to-[#C084FC] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <GraduationCap className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -282,7 +283,7 @@ export function CareerGrowth() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-[#072048] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] w-8 h-8 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -306,28 +307,29 @@ export function CareerGrowth() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#eca52e] to-[#9333ea] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Start Your AI Career Transformation Today</h2>
-          <p className="text-amber-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#FF6B35] to-[#FF8C61] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Start Your AI Career Transformation Today</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Join hundreds of professionals who have advanced their careers through our AI training programs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-[#eca52e] px-8 py-3 rounded-lg hover:bg-amber-50 transition"
+              className="inline-flex items-center justify-center bg-white text-[#FF6B35] px-8 py-3 rounded-lg hover:bg-amber-50 transition"
             >
               Enroll Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#eca52e] transition"
+              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#FF6B35] transition"
             >
               Schedule Consultation
             </Link>
           </div>
-          <p className="mt-6 text-amber-100 text-sm">
+          <p className="mt-6 text-[#CBD5E1] text-sm">
             Next cohort starts in 3 weeks • Limited spots available • Flexible payment options
           </p>
         </div>

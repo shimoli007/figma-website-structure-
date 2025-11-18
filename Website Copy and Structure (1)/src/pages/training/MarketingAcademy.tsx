@@ -6,27 +6,28 @@ export function MarketingAcademy() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-600 to-rose-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#A855F7] to-[#EC4899] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-pink-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Marketing Professionals Academy</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#A855F7]/20 to-[#EC4899]/20 border border-[#A855F7]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#FCE7F3]">Marketing Professionals Academy</span>
             </div>
-            <h1 className="text-white mb-6">AI-Powered Marketing That Delivers Results</h1>
-            <p className="text-pink-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>AI-Powered Marketing That Delivers Results</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Learn to leverage AI for campaign automation, data-driven strategy, and measurable ROI. Transform from traditional marketer to AI-enhanced growth driver.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-50 transition"
+                className="inline-flex items-center justify-center bg-white text-[#EC4899] px-6 py-3 rounded-lg hover:bg-gradient-to-br from-[#EC4899]/5 to-[#F9A8D4]/10 transition"
               >
                 Join Next Cohort
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 to="/use-cases" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-pink-600 transition"
+                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#EC4899] transition"
               >
                 View Success Stories
               </Link>
@@ -54,9 +55,9 @@ export function MarketingAcademy() {
               <p className="text-gray-600 mb-6">
                 Our Marketing Academy teaches you to harness AI as your competitive advantage—automating repetitive tasks while focusing your creativity on strategy and storytelling.
               </p>
-              <div className="bg-pink-50 border-l-4 border-pink-600 p-4 rounded">
+              <div className="bg-gradient-to-br from-[#EC4899]/5 to-[#F9A8D4]/10 border-l-4 border-[#EC4899] p-4 rounded">
                 <p className="text-gray-700">
-                  <span className="text-pink-700">Academy graduates report:</span> 50% faster campaign execution and 3x better data-driven decision making
+                  <span className="text-[#EC4899]">Academy graduates report:</span> 50% faster campaign execution and 3x better data-driven decision making
                 </p>
               </div>
             </div>
@@ -75,7 +76,7 @@ export function MarketingAcademy() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Megaphone className="w-12 h-12 text-pink-600 mb-4" />
+              <Megaphone className="w-12 h-12 text-[#EC4899] mb-4" />
               <h3 className="text-gray-900 mb-3">AI Content Creation & Copywriting</h3>
               <p className="text-gray-600 mb-4">
                 Master AI writing tools to create compelling copy, social media posts, email campaigns, and blog content at scale.
@@ -101,7 +102,7 @@ export function MarketingAcademy() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <TrendingUp className="w-12 h-12 text-pink-600 mb-4" />
+              <TrendingUp className="w-12 h-12 text-[#EC4899] mb-4" />
               <h3 className="text-gray-900 mb-3">Data-Driven Marketing Strategy</h3>
               <p className="text-gray-600 mb-4">
                 Use AI analytics to understand customer behavior, predict trends, and make smarter marketing decisions.
@@ -127,7 +128,7 @@ export function MarketingAcademy() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Target className="w-12 h-12 text-pink-600 mb-4" />
+              <Target className="w-12 h-12 text-[#EC4899] mb-4" />
               <h3 className="text-gray-900 mb-3">Campaign Automation & Personalization</h3>
               <p className="text-gray-600 mb-4">
                 Build automated marketing workflows that deliver personalized experiences to each customer at scale.
@@ -153,7 +154,7 @@ export function MarketingAcademy() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Zap className="w-12 h-12 text-pink-600 mb-4" />
+              <Zap className="w-12 h-12 text-[#EC4899] mb-4" />
               <h3 className="text-gray-900 mb-3">AI Tools for Creative Production</h3>
               <p className="text-gray-600 mb-4">
                 Leverage AI design tools to create visual content, videos, and graphics without a full creative team.
@@ -189,38 +190,38 @@ export function MarketingAcademy() {
               <h2 className="text-gray-900 mb-6">What You'll Achieve</h2>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#EC4899] mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900">Launch Faster Campaigns</h4>
                     <p className="text-gray-600">Reduce campaign planning and execution time from weeks to days using AI automation</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#EC4899] mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900">Make Data-Driven Decisions</h4>
                     <p className="text-gray-600">Stop guessing and start using AI analytics to optimize every marketing dollar</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#EC4899] mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900">Scale Personalization</h4>
                     <p className="text-gray-600">Deliver 1-to-1 personalized experiences to thousands of customers automatically</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-pink-500 mr-3 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-[#EC4899] mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="text-gray-900">Prove Marketing ROI</h4>
                     <p className="text-gray-600">Use AI attribution modeling to demonstrate concrete business impact of your campaigns</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-pink-50 p-6 rounded-lg">
+              <div className="bg-gradient-to-br from-[#EC4899]/5 to-[#F9A8D4]/10 p-6 rounded-lg">
                 <h4 className="text-gray-900 mb-3">Certification</h4>
                 <p className="text-gray-600 mb-2">
-                  Upon completion, you'll receive the <span className="text-pink-700">Cynea AI Marketing Professional</span> certificate, demonstrating your expertise in AI-powered marketing.
+                  Upon completion, you'll receive the <span className="text-[#EC4899]">Cynea AI Marketing Professional</span> certificate, demonstrating your expertise in AI-powered marketing.
                 </p>
                 <p className="text-gray-600 text-sm">
                   Recognized by leading brands and agencies across Africa and the UK
@@ -252,7 +253,7 @@ export function MarketingAcademy() {
                   <div className="text-sm text-gray-400">Payment plans available</div>
                 </div>
               </div>
-              <Link to="/contact" className="block w-full text-center bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
+              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-[#A855F7] to-[#EC4899] text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">
                 Enroll Now
               </Link>
             </div>
@@ -272,8 +273,8 @@ export function MarketingAcademy() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg">
               <div className="flex items-center mb-4">
-                <Award className="w-5 h-5 text-pink-600 mr-2" />
-                <span className="text-pink-600">Digital Marketing Manager</span>
+                <Award className="w-5 h-5 text-[#EC4899] mr-2" />
+                <span className="text-[#EC4899]">Digital Marketing Manager</span>
               </div>
               <p className="text-gray-600 mb-4 text-sm italic">
                 "The Academy completely transformed how I approach campaigns. I'm now launching personalized email sequences in hours instead of weeks, and our conversion rates are up 45%."
@@ -282,8 +283,8 @@ export function MarketingAcademy() {
             </div>
             <div className="bg-white p-6 rounded-lg">
               <div className="flex items-center mb-4">
-                <Award className="w-5 h-5 text-pink-600 mr-2" />
-                <span className="text-pink-600">Marketing Consultant</span>
+                <Award className="w-5 h-5 text-[#EC4899] mr-2" />
+                <span className="text-[#EC4899]">Marketing Consultant</span>
               </div>
               <p className="text-gray-600 mb-4 text-sm italic">
                 "I can now offer AI-powered marketing services to my clients, which has doubled my consulting rates. The ROI on this program was immediate."
@@ -292,8 +293,8 @@ export function MarketingAcademy() {
             </div>
             <div className="bg-white p-6 rounded-lg">
               <div className="flex items-center mb-4">
-                <Award className="w-5 h-5 text-pink-600 mr-2" />
-                <span className="text-pink-600">Content Marketing Lead</span>
+                <Award className="w-5 h-5 text-[#EC4899] mr-2" />
+                <span className="text-[#EC4899]">Content Marketing Lead</span>
               </div>
               <p className="text-gray-600 mb-4 text-sm italic">
                 "AI content tools helped me scale from 2 blog posts per week to 10, while maintaining quality. Our organic traffic has tripled in just 3 months."
@@ -305,28 +306,29 @@ export function MarketingAcademy() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Join the Next Generation of AI-Powered Marketers</h2>
-          <p className="text-pink-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#A855F7] to-[#EC4899] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Join the Next Generation of AI-Powered Marketers</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Limited spots available for our next cohort starting soon. Don't get left behind in the AI revolution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-pink-600 px-8 py-3 rounded-lg hover:bg-pink-50 transition"
+              className="inline-flex items-center justify-center bg-white text-[#EC4899] px-8 py-3 rounded-lg hover:bg-gradient-to-br from-[#EC4899]/5 to-[#F9A8D4]/10 transition"
             >
               Enroll in Next Cohort
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
               to="/resources" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-pink-600 transition"
+              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-[#EC4899] transition"
             >
               Download Curriculum
             </Link>
           </div>
-          <p className="mt-6 text-pink-100 text-sm">
+          <p className="mt-6 text-[#CBD5E1] text-sm">
             Early bird discount available • Payment plans offered • Money-back guarantee
           </p>
         </div>
