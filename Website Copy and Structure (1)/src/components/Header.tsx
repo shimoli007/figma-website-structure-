@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useFadeInLeft, useFadeInRight } from '../hooks/useAnimations';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,14 +9,17 @@ export function Header() {
   const [trainingOpen, setTrainingOpen] = useState(false);
   const location = useLocation();
 
+  const logoRef = useFadeInLeft(0, 600);
+  const navRef = useFadeInRight(200, 600);
+
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 glass">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link ref={logoRef as React.RefObject<HTMLAnchorElement>} to="/" className="flex items-center transition-smooth hover:opacity-80">
             <span className="text-[#072048] mr-2">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 2L4 8V15C4 22.18 9.84 28.64 16 30C22.16 28.64 28 22.18 28 15V8L16 2Z" fill="currentColor" fillOpacity="0.2"/>
@@ -27,36 +31,37 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div ref={navRef as React.RefObject<HTMLDivElement>} className="hidden md:flex items-center space-x-8">
             <div className="relative group">
-              <button 
-                className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition"
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition-smooth font-medium"
                 onMouseEnter={() => setProductsOpen(true)}
                 onMouseLeave={() => setProductsOpen(false)}
               >
                 <span>Products</span>
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className={`w-4 h-4 transition-transform ${productsOpen ? 'rotate-180' : ''}`} />
               </button>
               {productsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-xl rounded-lg py-2 border border-gray-100 animate-fade-in-down gpu-accelerated"
                   onMouseEnter={() => setProductsOpen(true)}
                   onMouseLeave={() => setProductsOpen(false)}
+                  style={{ animation: 'fadeInDown 0.3s ease-out forwards' }}
                 >
-                  <Link to="/products/ai-automation" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">AI & Automation Tools</div>
+                  <Link to="/products/ai-automation" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">AI & Automation Tools</div>
                     <div className="text-sm text-gray-500">Agentic AI solutions and productivity tools</div>
                   </Link>
-                  <Link to="/products/blockchain-compliance" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Blockchain Smart Contracts & Traceability</div>
+                  <Link to="/products/blockchain-compliance" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Blockchain Smart Contracts & Traceability</div>
                     <div className="text-sm text-gray-500">SaaS solutions for supply chain transparency</div>
                   </Link>
-                  <Link to="/products/digital-finance" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Digital Finance</div>
+                  <Link to="/products/digital-finance" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Digital Finance</div>
                     <div className="text-sm text-gray-500">Stablecoin payments and settlements</div>
                   </Link>
-                  <Link to="/products/data-analytics" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Data Analytics & Monetization</div>
+                  <Link to="/products/data-analytics" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Data Analytics & Monetization</div>
                     <div className="text-sm text-gray-500">Turn verified data into revenue</div>
                   </Link>
                 </div>
@@ -64,53 +69,54 @@ export function Header() {
             </div>
 
             <div className="relative group">
-              <button 
-                className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition"
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-[#072048] transition-smooth font-medium"
                 onMouseEnter={() => setTrainingOpen(true)}
                 onMouseLeave={() => setTrainingOpen(false)}
               >
                 <span>AI Training</span>
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className={`w-4 h-4 transition-transform ${trainingOpen ? 'rotate-180' : ''}`} />
               </button>
               {trainingOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-xl rounded-lg py-2 border border-gray-100 animate-fade-in-down gpu-accelerated"
                   onMouseEnter={() => setTrainingOpen(true)}
                   onMouseLeave={() => setTrainingOpen(false)}
+                  style={{ animation: 'fadeInDown 0.3s ease-out forwards' }}
                 >
-                  <Link to="/training/career-growth" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Career Growth Programs</div>
+                  <Link to="/training/career-growth" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Career Growth Programs</div>
                     <div className="text-sm text-gray-500">AI Literacy & upskilling for individuals</div>
                   </Link>
-                  <Link to="/training/b2b" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Corporate Training</div>
+                  <Link to="/training/b2b" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Corporate Training</div>
                     <div className="text-sm text-gray-500">Business solutions and team upskilling</div>
                   </Link>
-                  <Link to="/training/government" className="block px-4 py-2 hover:bg-gray-50">
-                    <div className="font-medium text-gray-900">Public Sector</div>
+                  <Link to="/training/government" className="block px-4 py-2 hover:bg-blue-50 transition-smooth group">
+                    <div className="font-semibold text-gray-900 group-hover:text-[#072048]">Public Sector</div>
                     <div className="text-sm text-gray-500">Government & non-profit programs</div>
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link to="/use-cases" className={`${isActive('/use-cases') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
+            <Link to="/use-cases" className={`${isActive('/use-cases') ? 'text-[#072048] font-semibold' : 'text-gray-700'} hover:text-[#072048] transition-smooth font-medium`}>
               Use Cases
             </Link>
-            <Link to="/about" className={`${isActive('/about') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
+            <Link to="/about" className={`${isActive('/about') ? 'text-[#072048] font-semibold' : 'text-gray-700'} hover:text-[#072048] transition-smooth font-medium`}>
               About
             </Link>
-            <Link to="/talent-hub" className={`${isActive('/talent-hub') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
+            <Link to="/talent-hub" className={`${isActive('/talent-hub') ? 'text-[#072048] font-semibold' : 'text-gray-700'} hover:text-[#072048] transition-smooth font-medium`}>
               Talent Hub
             </Link>
-            <Link to="/resources" className={`${isActive('/resources') ? 'text-[#072048]' : 'text-gray-700'} hover:text-[#072048] transition`}>
+            <Link to="/resources" className={`${isActive('/resources') ? 'text-[#072048] font-semibold' : 'text-gray-700'} hover:text-[#072048] transition-smooth font-medium`}>
               Industry Insights
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/contact" className="bg-[#eca52e] text-[#072048] px-4 py-2 rounded-lg hover:bg-[#d69429] transition">
+            <Link to="/contact" className="bg-[#eca52e] text-[#072048] px-6 py-2 rounded-lg hover:bg-[#d69429] transition-smooth shadow-md hover:shadow-lg btn-hover-lift font-semibold">
               Get Started
             </Link>
           </div>
@@ -126,7 +132,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 animate-fade-in-down">
             <div className="space-y-4">
               <div>
                 <div className="text-gray-900 mb-2">Products</div>
