@@ -6,27 +6,28 @@ export function AIAutomation() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#6C2BD9] to-[#A855F7] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-purple-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">AI & Automation Tools</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#6C2BD9]/20 to-[#A855F7]/20 border border-[#6C2BD9]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#E0E7FF]">AI & Automation Tools</span>
             </div>
-            <h1 className="text-white mb-6">Intelligent Agents for SME Operations</h1>
-            <p className="text-purple-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Intelligent Agents for SME Operations</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Transform your business with AI-powered agents that handle customer service, inventory management, analytics, and more—freeing your team to focus on growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition"
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-white text-[#6C2BD9] px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-[#6C2BD9]/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
               >
                 Request Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                to="/use-cases" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition"
+              <Link
+                to="/use-cases"
+                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-xl hover:bg-white hover:text-[#6C2BD9] transition-all duration-300 font-semibold"
               >
                 View Use Cases
               </Link>
@@ -47,9 +48,9 @@ export function AIAutomation() {
               <p className="text-gray-600 mb-6">
                 Whether you're processing customer inquiries, managing inventory, or analyzing sales patterns, our intelligent automation adapts to your business workflows and scales as you grow.
               </p>
-              <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
-                <p className="text-gray-700">
-                  <span className="text-purple-700">Average time savings:</span> 15-20 hours per week per team member on repetitive tasks
+              <div className="bg-gradient-to-br from-[#6C2BD9]/5 to-[#A855F7]/10 border-l-4 border-[#6C2BD9] p-6 rounded-xl">
+                <p className="text-[#0F172A]">
+                  <span className="text-[#6C2BD9] font-semibold">Average time savings:</span> 15-20 hours per week per team member on repetitive tasks
                 </p>
               </div>
             </div>
@@ -75,7 +76,7 @@ export function AIAutomation() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Bot className="w-12 h-12 text-purple-600 mb-4" />
+              <Bot className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">AI Customer Service Agents</h3>
               <p className="text-gray-600 mb-4">
                 24/7 automated responses to common inquiries via WhatsApp, SMS, and web chat in multiple languages.
@@ -97,7 +98,7 @@ export function AIAutomation() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <BarChart3 className="w-12 h-12 text-purple-600 mb-4" />
+              <BarChart3 className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">Productivity Dashboard</h3>
               <p className="text-gray-600 mb-4">
                 Real-time insights into sales, inventory, customer behavior, and operational efficiency.
@@ -119,7 +120,7 @@ export function AIAutomation() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Workflow className="w-12 h-12 text-purple-600 mb-4" />
+              <Workflow className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">Smart Workflow Automation</h3>
               <p className="text-gray-600 mb-4">
                 Automate repetitive tasks like invoice processing, order confirmations, and inventory updates.
@@ -141,7 +142,7 @@ export function AIAutomation() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <MessageSquare className="w-12 h-12 text-purple-600 mb-4" />
+              <MessageSquare className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">Document Processing</h3>
               <p className="text-gray-600 mb-4">
                 Convert receipts, invoices, and forms into structured digital data automatically.
@@ -163,7 +164,7 @@ export function AIAutomation() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Clock className="w-12 h-12 text-purple-600 mb-4" />
+              <Clock className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">Inventory Intelligence</h3>
               <p className="text-gray-600 mb-4">
                 AI-powered forecasting to optimize stock levels and reduce waste.
@@ -185,7 +186,7 @@ export function AIAutomation() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <BarChart3 className="w-12 h-12 text-purple-600 mb-4" />
+              <BarChart3 className="w-12 h-12 text-[#6C2BD9] mb-4" />
               <h3 className="text-gray-900 mb-3">Sales Analytics</h3>
               <p className="text-gray-600 mb-4">
                 Understand customer patterns, identify growth opportunities, and optimize pricing.
@@ -220,9 +221,9 @@ export function AIAutomation() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Edtech AI Tools */}
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-purple-600 transition">
-              <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Bot className="w-6 h-6 text-purple-600" />
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#6C2BD9] hover:shadow-lg hover:shadow-[#6C2BD9]/10 transition">
+              <div className="bg-gradient-to-br from-[#6C2BD9] to-[#A855F7] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Bot className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-gray-900 mb-3">Edtech AI Tools</h3>
               <p className="text-gray-600 mb-4">
@@ -242,15 +243,15 @@ export function AIAutomation() {
                   <span>Learning analytics dashboard</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#6C2BD9] hover:text-[#A855F7] inline-flex items-center">
                 Request Demo <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
 
             {/* Automated ESG Reporting */}
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-purple-600 transition">
-              <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-green-600" />
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#6C2BD9] hover:shadow-lg hover:shadow-[#6C2BD9]/10 transition">
+              <div className="bg-gradient-to-br from-[#06B6D4] to-[#22D3EE] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-gray-900 mb-3">Automated ESG Reporting</h3>
               <p className="text-gray-600 mb-4">
@@ -270,15 +271,15 @@ export function AIAutomation() {
                   <span>Investor-ready reports</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#6C2BD9] hover:text-[#A855F7] inline-flex items-center">
                 Request Demo <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
 
             {/* Automated Marketing Products */}
-            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-purple-600 transition">
-              <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <MessageSquare className="w-6 h-6 text-blue-600" />
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-[#6C2BD9] hover:shadow-lg hover:shadow-[#6C2BD9]/10 transition">
+              <div className="bg-gradient-to-br from-[#FF6B35] to-[#FF8C61] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-gray-900 mb-3">Automated Marketing Products</h3>
               <p className="text-gray-600 mb-4">
@@ -298,7 +299,7 @@ export function AIAutomation() {
                   <span>Automated lead nurturing</span>
                 </li>
               </ul>
-              <Link to="/contact" className="text-purple-600 hover:text-purple-700 inline-flex items-center">
+              <Link to="/contact" className="text-[#6C2BD9] hover:text-[#A855F7] inline-flex items-center">
                 Request Demo <ArrowRight className="ml-1 w-4 h-4" />
               </Link>
             </div>
@@ -307,23 +308,24 @@ export function AIAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Ready to Automate Your Business?</h2>
-          <p className="text-purple-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#6C2BD9] to-[#A855F7] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Ready to Automate Your Business?</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Join hundreds of SMEs already saving 15+ hours per week with Cynea AI automation tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center bg-white text-[#6C2BD9] px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-white/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
             >
               Request Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              to="/use-cases" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition"
+            <Link
+              to="/use-cases"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-xl hover:bg-white hover:text-[#6C2BD9] transition-all duration-300 font-semibold"
             >
               View Success Stories
             </Link>

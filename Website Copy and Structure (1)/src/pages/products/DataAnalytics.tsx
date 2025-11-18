@@ -6,27 +6,28 @@ export function DataAnalytics() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-600 to-purple-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#A855F7] to-[#C084FC] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-indigo-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Data Analytics & Monetization</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#A855F7]/20 to-[#C084FC]/20 border border-[#A855F7]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#F3E8FF]">Data Analytics & Monetization</span>
             </div>
-            <h1 className="text-white mb-6">Turn Your Data Into Revenue</h1>
-            <p className="text-indigo-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Turn Your Data Into Revenue</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Your verified business data is valuable to banks, corporates, and impact investors. Our analytics platform helps you monetize your data insights—selling verified SME intelligence to financial institutions—while accessing predictive intelligence to grow your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition"
+                className="inline-flex items-center justify-center bg-white text-[#A855F7] px-6 py-3 rounded-lg hover:bg-gradient-to-br from-[#A855F7]/5 to-[#C084FC]/10 transition"
               >
                 Explore Platform
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 to="/use-cases" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition"
+                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#A855F7] transition"
               >
                 View Use Cases
               </Link>
@@ -54,9 +55,9 @@ export function DataAnalytics() {
               <p className="text-gray-600 mb-6">
                 Instead of letting this valuable intelligence sit idle, our platform helps you package and monetize it—while maintaining full control over what you share and with whom.
               </p>
-              <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded">
+              <div className="bg-gradient-to-br from-[#A855F7]/5 to-[#C084FC]/10 border-l-4 border-[#A855F7] p-4 rounded">
                 <p className="text-gray-700">
-                  <span className="text-indigo-700">Average SME data value:</span> $500-$2,000/year in verified insights that banks and corporates will pay for
+                  <span className="text-[#A855F7]">Average SME data value:</span> $500-$2,000/year in verified insights that banks and corporates will pay for
                 </p>
               </div>
             </div>
@@ -75,7 +76,7 @@ export function DataAnalytics() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <BarChart3 className="w-12 h-12 text-indigo-600 mb-4" />
+              <BarChart3 className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">SME Insights Marketplace</h3>
               <p className="text-gray-600 mb-4">
                 Sell anonymized, aggregated insights about your market, suppliers, and operations to interested parties.
@@ -101,7 +102,7 @@ export function DataAnalytics() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <TrendingUp className="w-12 h-12 text-indigo-600 mb-4" />
+              <TrendingUp className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">Predictive Analytics</h3>
               <p className="text-gray-600 mb-4">
                 AI-powered forecasting to optimize inventory, predict demand, and identify growth opportunities.
@@ -127,7 +128,7 @@ export function DataAnalytics() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Users className="w-12 h-12 text-indigo-600 mb-4" />
+              <Users className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">Supplier Verification Network</h3>
               <p className="text-gray-600 mb-4">
                 Access verified data on potential suppliers and partners, or offer your verified profile to buyers.
@@ -153,7 +154,7 @@ export function DataAnalytics() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Database className="w-12 h-12 text-indigo-600 mb-4" />
+              <Database className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">Credit Score Enhancement</h3>
               <p className="text-gray-600 mb-4">
                 Build a blockchain-backed credit profile that helps you access better financing terms.
@@ -179,7 +180,7 @@ export function DataAnalytics() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Award className="w-12 h-12 text-indigo-600 mb-4" />
+              <Award className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">Impact Measurement</h3>
               <p className="text-gray-600 mb-4">
                 Track and report your social and environmental impact to attract ESG-focused investors and buyers.
@@ -205,7 +206,7 @@ export function DataAnalytics() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <BarChart3 className="w-12 h-12 text-indigo-600 mb-4" />
+              <BarChart3 className="w-12 h-12 text-[#A855F7] mb-4" />
               <h3 className="text-gray-900 mb-3">Business Intelligence Dashboard</h3>
               <p className="text-gray-600 mb-4">
                 Real-time visibility into all your key metrics in one intuitive, mobile-friendly dashboard.
@@ -301,25 +302,25 @@ export function DataAnalytics() {
                 As you use Cynea's platform, every verified transaction, compliance check, and operational metric creates valuable data. Here's how you can monetize it:
               </p>
               <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-600">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-[#A855F7]">
                   <h4 className="text-gray-900 mb-1">Market Insights</h4>
                   <p className="text-gray-600 text-sm">Aggregated market trends and pricing data from your region</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-600">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-[#A855F7]">
                   <h4 className="text-gray-900 mb-1">Supplier Networks</h4>
                   <p className="text-gray-600 text-sm">Verified supplier information that helps others make informed decisions</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-600">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-[#A855F7]">
                   <h4 className="text-gray-900 mb-1">Performance Benchmarks</h4>
                   <p className="text-gray-600 text-sm">Industry performance metrics that guide business strategy</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-600">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-[#A855F7]">
                   <h4 className="text-gray-900 mb-1">Compliance Records</h4>
                   <p className="text-gray-600 text-sm">Verified certification and compliance status valued by buyers</p>
                 </div>
               </div>
             </div>
-            <div className="bg-indigo-600 text-white p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-[#6C2BD9] to-[#A855F7] text-white p-8 rounded-xl">
               <h3 className="text-white mb-4">Data Monetization Potential</h3>
               <div className="space-y-6">
                 <div>
@@ -327,25 +328,25 @@ export function DataAnalytics() {
                     <span>Monthly Active SME</span>
                     <span>$50-$150/month</span>
                   </div>
-                  <p className="text-indigo-200 text-sm">Basic transaction and operational data</p>
+                  <p className="text-[#E0E7FF] text-sm">Basic transaction and operational data</p>
                 </div>
                 <div>
                   <div className="flex justify-between mb-2">
                     <span>Export-Focused SME</span>
                     <span>$150-$500/month</span>
                   </div>
-                  <p className="text-indigo-200 text-sm">Compliance, traceability, and supply chain data</p>
+                  <p className="text-[#E0E7FF] text-sm">Compliance, traceability, and supply chain data</p>
                 </div>
                 <div>
                   <div className="flex justify-between mb-2">
                     <span>Market Leader</span>
                     <span>$500+/month</span>
                   </div>
-                  <p className="text-indigo-200 text-sm">Premium insights, supplier networks, industry benchmarks</p>
+                  <p className="text-[#E0E7FF] text-sm">Premium insights, supplier networks, industry benchmarks</p>
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-indigo-500">
-                <p className="text-sm text-indigo-200">
+                <p className="text-sm text-[#E0E7FF]">
                   All data is anonymized and aggregated. You maintain full control over what is shared.
                 </p>
               </div>
@@ -355,23 +356,24 @@ export function DataAnalytics() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Turn Your Business Data Into An Asset</h2>
-          <p className="text-indigo-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#A855F7] to-[#C084FC] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Turn Your Business Data Into An Asset</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Join the SMEs already earning passive income from their verified business data while accessing powerful analytics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center bg-white text-[#A855F7] px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-white/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
             >
               Explore Analytics Platform
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              to="/use-cases" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition"
+            <Link
+              to="/use-cases"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-xl hover:bg-white hover:text-[#A855F7] transition-all duration-300 font-semibold"
             >
               See Success Stories
             </Link>

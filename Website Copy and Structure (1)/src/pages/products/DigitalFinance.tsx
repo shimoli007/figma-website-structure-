@@ -6,27 +6,28 @@ export function DigitalFinance() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-600 to-cyan-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#06B6D4] to-[#22D3EE] text-white py-32">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-block bg-teal-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-              <span className="text-sm">Digital Finance Infrastructure</span>
+            <div className="inline-flex items-center bg-gradient-to-r from-[#06B6D4]/20 to-[#22D3EE]/20 border border-[#06B6D4]/30 px-4 py-2 rounded-full mb-6">
+              <span className="text-sm text-[#E0F2FE]">Digital Finance Infrastructure</span>
             </div>
-            <h1 className="text-white mb-6">Stable Payments for Unstable Currencies</h1>
-            <p className="text-teal-100 text-lg mb-8">
+            <h1 className="text-white mb-6 text-5xl font-black leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>Stable Payments for Unstable Currencies</h1>
+            <p className="text-[#CBD5E1] text-lg mb-8">
               Bypass currency volatility and high fees with stablecoin-powered cross-border payments. Get paid faster, preserve your earnings, and access working capital when you need it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center justify-center bg-white text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50 transition"
+                className="inline-flex items-center justify-center bg-white text-[#06B6D4] px-6 py-3 rounded-lg hover:bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 transition"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 to="/use-cases" 
-                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-teal-600 transition"
+                className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-[#06B6D4] transition"
               >
                 See Success Stories
               </Link>
@@ -64,9 +65,9 @@ export function DigitalFinance() {
                   </div>
                 </div>
               </div>
-              <div className="bg-teal-50 border-l-4 border-teal-600 p-4 rounded">
+              <div className="bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 border-l-4 border-[#06B6D4] p-4 rounded">
                 <p className="text-gray-700">
-                  <span className="text-teal-700">Cynea's solution:</span> Stablecoin infrastructure that settles in minutes, not days, with fees under 1%.
+                  <span className="text-[#06B6D4]">Cynea's solution:</span> Stablecoin infrastructure that settles in minutes, not days, with fees under 1%.
                 </p>
               </div>
             </div>
@@ -92,7 +93,7 @@ export function DigitalFinance() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <DollarSign className="w-12 h-12 text-teal-600 mb-4" />
+              <DollarSign className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Stablecoin Payment Solutions</h3>
               <p className="text-gray-600 mb-4">
                 Accept payments in USD-pegged stablecoins (USDC, USDT) that maintain their value regardless of local currency fluctuations.
@@ -118,7 +119,7 @@ export function DigitalFinance() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Zap className="w-12 h-12 text-teal-600 mb-4" />
+              <Zap className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Cross-Border Settlement</h3>
               <p className="text-gray-600 mb-4">
                 Send and receive international payments in minutes instead of days, with full transparency and tracking.
@@ -144,7 +145,7 @@ export function DigitalFinance() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <TrendingDown className="w-12 h-12 text-teal-600 mb-4" />
+              <TrendingDown className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Ultra-Low Fees</h3>
               <p className="text-gray-600 mb-4">
                 Pay less than 1% in transaction fees compared to 5-10% with traditional banking channels.
@@ -170,7 +171,7 @@ export function DigitalFinance() {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-sm">
-              <Lock className="w-12 h-12 text-teal-600 mb-4" />
+              <Lock className="w-12 h-12 text-[#06B6D4] mb-4" />
               <h3 className="text-gray-900 mb-3">Digital Trade Finance</h3>
               <p className="text-gray-600 mb-4">
                 Access working capital based on your verified transaction history and export contracts.
@@ -211,42 +212,42 @@ export function DigitalFinance() {
                 <tr>
                   <th className="px-6 py-4 text-left text-gray-900">Feature</th>
                   <th className="px-6 py-4 text-left text-gray-900">Traditional Banking</th>
-                  <th className="px-6 py-4 text-left text-teal-600">Cynea Finance</th>
+                  <th className="px-6 py-4 text-left text-[#06B6D4]">Cynea Finance</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-6 py-4 text-gray-900">Transaction Fees</td>
                   <td className="px-6 py-4 text-gray-600">5-10% of transfer amount</td>
-                  <td className="px-6 py-4 text-teal-600">&lt;1% of transfer amount</td>
+                  <td className="px-6 py-4 text-[#06B6D4]">&lt;1% of transfer amount</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-gray-900">Settlement Time</td>
                   <td className="px-6 py-4 text-gray-600">3-7 business days</td>
-                  <td className="px-6 py-4 text-teal-600">Under 15 minutes</td>
+                  <td className="px-6 py-4 text-[#06B6D4]">Under 15 minutes</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-gray-900">Currency Protection</td>
                   <td className="px-6 py-4 text-gray-600">Exposed to devaluation</td>
-                  <td className="px-6 py-4 text-teal-600">USD-pegged stablecoins</td>
+                  <td className="px-6 py-4 text-[#06B6D4]">USD-pegged stablecoins</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-gray-900">Working Capital Access</td>
                   <td className="px-6 py-4 text-gray-600">Weeks of paperwork</td>
-                  <td className="px-6 py-4 text-teal-600">24-48 hours approval</td>
+                  <td className="px-6 py-4 text-[#06B6D4]">24-48 hours approval</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-gray-900">Payment Transparency</td>
                   <td className="px-6 py-4 text-gray-600">Limited tracking</td>
-                  <td className="px-6 py-4 text-teal-600">Full blockchain visibility</td>
+                  <td className="px-6 py-4 text-[#06B6D4]">Full blockchain visibility</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div className="mt-8 text-center">
-            <div className="inline-block bg-teal-50 px-6 py-4 rounded-lg">
+            <div className="inline-block bg-gradient-to-br from-[#06B6D4]/5 to-[#22D3EE]/10 px-6 py-4 rounded-lg">
               <p className="text-gray-900">
-                <span className="text-teal-700">Example savings:</span> On a $10,000 export payment, save up to $900 in fees and preserve value against currency fluctuation
+                <span className="text-[#06B6D4]">Example savings:</span> On a $10,000 export payment, save up to $900 in fees and preserve value against currency fluctuation
               </p>
             </div>
           </div>
@@ -264,7 +265,7 @@ export function DigitalFinance() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 1
               </div>
               <h4 className="text-gray-900 mb-2">Sign Up</h4>
@@ -273,7 +274,7 @@ export function DigitalFinance() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 2
               </div>
               <h4 className="text-gray-900 mb-2">Connect Wallet</h4>
@@ -282,7 +283,7 @@ export function DigitalFinance() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 3
               </div>
               <h4 className="text-gray-900 mb-2">Share Address</h4>
@@ -291,7 +292,7 @@ export function DigitalFinance() {
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-teal-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-gradient-to-r from-[#6C2BD9] to-[#A855F7] text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 4
               </div>
               <h4 className="text-gray-900 mb-2">Get Paid</h4>
@@ -304,28 +305,29 @@ export function DigitalFinance() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white mb-4">Stop Losing Money to Currency Risk</h2>
-          <p className="text-teal-100 mb-8 text-lg">
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-[#0F172A] via-[#06B6D4] to-[#22D3EE] text-white">
+        <div className="absolute inset-0 dot-grid opacity-10"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white mb-6 text-4xl font-black" style={{ fontFamily: 'var(--font-heading)' }}>Stop Losing Money to Currency Risk</h2>
+          <p className="text-[#CBD5E1] mb-8 text-lg">
             Protect your hard-earned export revenue with stablecoin infrastructure built for emerging market SMEs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-white text-teal-600 px-8 py-3 rounded-lg hover:bg-teal-50 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center bg-white text-[#06B6D4] px-8 py-3 rounded-xl hover:shadow-lg hover:shadow-white/30 transition-all duration-300 hover:-translate-y-0.5 font-semibold"
             >
               Open Your Account
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              to="/use-cases" 
-              className="inline-flex items-center justify-center border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-teal-600 transition"
+            <Link
+              to="/use-cases"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-xl hover:bg-white hover:text-[#06B6D4] transition-all duration-300 font-semibold"
             >
               See Success Stories
             </Link>
           </div>
-          <p className="mt-6 text-teal-100 text-sm">
+          <p className="mt-6 text-[#CBD5E1] text-sm">
             No setup fees • No monthly minimums • Get started in 48 hours
           </p>
         </div>
