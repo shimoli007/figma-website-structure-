@@ -1,15 +1,41 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Database, Cpu, Shield, TrendingUp, DollarSign, Network, CheckCircle, Award } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { useSlideInUp, useSlideInLeft, useSlideInRight, useStaggerFadeIn, useScrollAnimation } from '../hooks/useAnimation';
 
 export function Home() {
+  const heroTextRef = useSlideInLeft({ duration: 1000, distance: 80 });
+  const heroCardRef = useSlideInRight({ duration: 1000, distance: 80, delay: 200 });
+  const infrastructureRef = useScrollAnimation(
+    { opacity: [0, 1], translateY: [50, 0] },
+    { duration: 800 }
+  );
+  const infrastructureCardsRef = useStaggerFadeIn({ staggerDelay: 150, delay: 300 });
+  const differentiatorTextRef = useScrollAnimation(
+    { opacity: [0, 1], translateX: [-50, 0] },
+    { duration: 800 }
+  );
+  const differentiatorImageRef = useScrollAnimation(
+    { opacity: [0, 1], scale: [0.95, 1] },
+    { duration: 800, delay: 200 }
+  );
+  const socialProofRef = useScrollAnimation(
+    { opacity: [0, 1], translateY: [40, 0] },
+    { duration: 800 }
+  );
+  const ctaCardsRef = useStaggerFadeIn({ staggerDelay: 100 });
+  const finalCtaRef = useScrollAnimation(
+    { opacity: [0, 1], translateY: [30, 0] },
+    { duration: 800 }
+  );
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div ref={heroTextRef as any}>
               <div className="inline-block bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
                 <span className="text-sm">AI + Blockchain Infrastructure for Emerging Markets</span>
               </div>
@@ -20,16 +46,16 @@ export function Home() {
                 Complete infrastructure stack for emerging market SMEs to compete globally. Train your team, digitize operations, automate workflows, trace products, and access digital finance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition transform hover:scale-105"
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link 
-                  to="/use-cases" 
-                  className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition"
+                <Link
+                  to="/use-cases"
+                  className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition transform hover:scale-105"
                 >
                   View Use Cases
                 </Link>
@@ -46,37 +72,37 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative bg-white p-8 rounded-lg shadow-2xl">
+            <div ref={heroCardRef as any} className="relative bg-white p-8 rounded-lg shadow-2xl">
               <div className="flex flex-col items-center space-y-4">
                 <div className="w-full flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Train</div>
                     </div>
                     <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Digitize</div>
                     </div>
                   </div>
                 </div>
                 <div className="w-full flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <div className="bg-[#9333ea] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#9333ea] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Automate</div>
                     </div>
                     <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#072048] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#072048] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Trace</div>
                     </div>
                   </div>
                 </div>
                 <div className="w-full flex items-center justify-center">
                   <div className="flex items-center space-x-2">
-                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Finance</div>
                     </div>
                     <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center">
+                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center transform transition hover:scale-110">
                       <div className="text-sm">Monetize</div>
                     </div>
                   </div>
@@ -90,15 +116,15 @@ export function Home() {
       {/* Infrastructure Stack */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div ref={infrastructureRef as any} className="text-center mb-16">
             <h2 className="text-gray-900 mb-4">Complete Infrastructure Stack</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               We're not just a platform or tool—we're the full infrastructure that emerging market SMEs need to compete in the global economy. From AI training to digital finance, we've got you covered.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div ref={infrastructureCardsRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Train */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Cpu className="w-6 h-6 text-blue-600" />
               </div>
@@ -112,7 +138,7 @@ export function Home() {
             </div>
 
             {/* Digitize */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Database className="w-6 h-6 text-green-600" />
               </div>
@@ -126,7 +152,7 @@ export function Home() {
             </div>
 
             {/* Automate */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Network className="w-6 h-6 text-purple-600" />
               </div>
@@ -140,7 +166,7 @@ export function Home() {
             </div>
 
             {/* Trace */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-orange-600" />
               </div>
@@ -154,7 +180,7 @@ export function Home() {
             </div>
 
             {/* Finance */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-teal-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-teal-600" />
               </div>
@@ -168,7 +194,7 @@ export function Home() {
             </div>
 
             {/* Monetize */}
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-indigo-600" />
               </div>
@@ -188,7 +214,7 @@ export function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div ref={differentiatorTextRef as any}>
               <h2 className="text-gray-900 mb-6">Why Cynea AI is Different</h2>
               <p className="text-gray-600 mb-8">
                 We're the only platform converging AI, blockchain, and stablecoin infrastructure specifically designed for emerging market SMEs—backed by government partnerships and proven commercial traction.
@@ -224,8 +250,8 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div>
-              <ImageWithFallback 
+            <div ref={differentiatorImageRef as any}>
+              <ImageWithFallback
                 src="https://images.unsplash.com/photo-1631864031824-d636e1dc5292?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWluJTIwbmV0d29yayUyMGRpZ2l0YWx8ZW58MXx8fHwxNzYyNDc0MzM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Blockchain and digital infrastructure"
                 className="rounded-lg shadow-xl"
@@ -238,7 +264,7 @@ export function Home() {
       {/* Social Proof */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div ref={socialProofRef as any} className="text-center mb-12">
             <h2 className="text-white mb-4">Trusted by Leaders Across Sectors</h2>
             <p className="text-blue-100 max-w-2xl mx-auto">
               From government institutions to innovative SMEs, Cynea AI is powering digital transformation across UK-Emerging Markets corridors.
@@ -279,7 +305,7 @@ export function Home() {
               Whether you're an SME, government institution, enterprise, or marketing professional, we have solutions tailored for you.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div ref={ctaCardsRef as any} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm border-2 border-transparent hover:border-blue-600 transition">
               <h4 className="text-gray-900 mb-2">For SMEs</h4>
               <p className="text-gray-600 mb-4 text-sm">
@@ -322,22 +348,22 @@ export function Home() {
 
       {/* Final CTA */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div ref={finalCtaRef as any} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-gray-900 mb-4">Ready to Transform Your Business?</h2>
           <p className="text-gray-600 mb-8">
             Join the SMEs, governments, and enterprises already building the future of borderless trade with Cynea AI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition"
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105"
             >
               Schedule a Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              to="/resources" 
-              className="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition"
+            <Link
+              to="/resources"
+              className="inline-flex items-center justify-center border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition transform hover:scale-105"
             >
               Explore Resources
             </Link>

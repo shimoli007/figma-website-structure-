@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useSlideInUp } from '../hooks/useAnimation';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [trainingOpen, setTrainingOpen] = useState(false);
   const location = useLocation();
+  const headerRef = useSlideInUp({ duration: 800, distance: 20 });
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header ref={headerRef as any} className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -38,24 +40,24 @@ export function Header() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {productsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100 animate-fadeIn"
                   onMouseEnter={() => setProductsOpen(true)}
                   onMouseLeave={() => setProductsOpen(false)}
                 >
-                  <Link to="/products/ai-automation" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/products/ai-automation" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">AI & Automation Tools</div>
                     <div className="text-sm text-gray-500">Agentic AI solutions and productivity tools</div>
                   </Link>
-                  <Link to="/products/blockchain-compliance" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/products/blockchain-compliance" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Blockchain Smart Contracts & Traceability</div>
                     <div className="text-sm text-gray-500">SaaS solutions for supply chain transparency</div>
                   </Link>
-                  <Link to="/products/digital-finance" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/products/digital-finance" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Digital Finance</div>
                     <div className="text-sm text-gray-500">Stablecoin payments and settlements</div>
                   </Link>
-                  <Link to="/products/data-analytics" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/products/data-analytics" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Data Analytics & Monetization</div>
                     <div className="text-sm text-gray-500">Turn verified data into revenue</div>
                   </Link>
@@ -73,20 +75,20 @@ export function Header() {
                 <ChevronDown className="w-4 h-4" />
               </button>
               {trainingOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100"
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg py-2 border border-gray-100 animate-fadeIn"
                   onMouseEnter={() => setTrainingOpen(true)}
                   onMouseLeave={() => setTrainingOpen(false)}
                 >
-                  <Link to="/training/career-growth" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/training/career-growth" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Career Growth Programs</div>
                     <div className="text-sm text-gray-500">AI Literacy & upskilling for individuals</div>
                   </Link>
-                  <Link to="/training/b2b" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/training/b2b" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Corporate Training</div>
                     <div className="text-sm text-gray-500">Business solutions and team upskilling</div>
                   </Link>
-                  <Link to="/training/government" className="block px-4 py-2 hover:bg-gray-50">
+                  <Link to="/training/government" className="block px-4 py-2 hover:bg-gray-50 transition transform hover:translate-x-1">
                     <div className="font-medium text-gray-900">Public Sector</div>
                     <div className="text-sm text-gray-500">Government & non-profit programs</div>
                   </Link>
@@ -110,7 +112,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/contact" className="bg-[#eca52e] text-[#072048] px-4 py-2 rounded-lg hover:bg-[#d69429] transition">
+            <Link to="/contact" className="bg-[#eca52e] text-[#072048] px-4 py-2 rounded-lg hover:bg-[#d69429] transition transform hover:scale-105">
               Get Started
             </Link>
           </div>
