@@ -612,8 +612,9 @@ select[aria-invalid="true"]:focus {
    =================================== */
 
 /* Initial states for animated elements */
+/* Removed blanket opacity: 0 to prevent invisible elements if animations don't load */
 [data-animate] {
-  opacity: 0;
+  /* opacity set by JavaScript animations */
 }
 
 /* Animation classes for initial states */
@@ -625,6 +626,18 @@ select[aria-invalid="true"]:focus {
 .animate-fade-in-down {
   opacity: 0;
   transform: translateY(-40px);
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-left {
