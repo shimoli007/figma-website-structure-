@@ -9,6 +9,9 @@ import { animate, utils } from 'animejs';
 type AnimeParams = Parameters<typeof animate>[0];
 type AnimeInstance = ReturnType<typeof animate>;
 
+// Debug logging
+console.log('[Animations] Module loaded, anime.js version:', animate ? 'loaded' : 'NOT LOADED');
+
 /**
  * Check if user prefers reduced motion
  */
@@ -208,41 +211,26 @@ export const animateOnScroll = (
     once = true,
   } = options;
 
+  console.log('[animateOnScroll] Setting up observer for:', selector);
+
   const elements = document.querySelectorAll(selector);
 
-  if (elements.length === 0) return;
+  if (elements.length === 0) {
+    console.log('[animateOnScroll] No elements found for:', selector);
+    return;
+  }
 
-  // Set initial state
-  elements.forEach((el) => {
-    if (el instanceof HTMLElement) {
-      el.style.opacity = '0';
-    }
-  });
+  console.log('[animateOnScroll] Found', elements.length, 'elements');
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const target = entry.target as HTMLElement;
+          console.log('[animateOnScroll] Element in view, adding in-view class');
 
-          // Trigger animation based on type
-          switch (animationType) {
-            case 'fadeInUp':
-              fadeInUp(target, delay, duration);
-              break;
-            case 'fadeInLeft':
-              fadeInLeft(target, delay, duration);
-              break;
-            case 'fadeInRight':
-              fadeInRight(target, delay, duration);
-              break;
-            case 'scaleIn':
-              scaleIn(target, delay, duration);
-              break;
-            case 'zoomIn':
-              zoomIn(target, delay, duration);
-              break;
-          }
+          // Add CSS class to trigger animation
+          target.classList.add('in-view');
 
           // Unobserve if once is true
           if (once) {
