@@ -132,18 +132,20 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
+  --font-weight-black: 900;
 
-  /* Typography - Font Sizes */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
+  /* Typography - Font Sizes - Bold & Modern Scale */
+  --font-size-xs: 0.8125rem;      /* 13px */
+  --font-size-sm: 0.9375rem;      /* 15px */
+  --font-size-base: 1.0625rem;    /* 17px - larger base for better readability */
+  --font-size-lg: 1.1875rem;      /* 19px */
+  --font-size-xl: 1.375rem;       /* 22px */
+  --font-size-2xl: 1.75rem;       /* 28px */
+  --font-size-3xl: 2.25rem;       /* 36px */
+  --font-size-4xl: 3rem;          /* 48px */
+  --font-size-5xl: 4rem;          /* 64px */
+  --font-size-6xl: 5rem;          /* 80px */
+  --font-size-7xl: 6rem;          /* 96px - new ultra-large size */
 
   /* Transitions */
   --transition-fast: 150ms;
@@ -286,87 +288,108 @@
 }
 
 /**
- * Enhanced Typography Hierarchy
- * Implements improved visual hierarchy for corporate B2B/B2G audiences
+ * Bold & Modern Typography Hierarchy
+ * Implements striking visual hierarchy with impactful headings
  */
 @layer base {
   :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
     h1 {
-      font-size: var(--font-size-5xl);
-      font-weight: var(--font-weight-extrabold);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      color: var(--primary);
-      margin-bottom: 1rem;
+      font-size: var(--font-size-6xl);
+      font-weight: var(--font-weight-black);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-wrap: balance;
     }
 
     h2 {
-      font-size: var(--font-size-4xl);
-      font-weight: var(--font-weight-bold);
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      color: var(--primary);
-      margin-bottom: 0.875rem;
+      font-size: var(--font-size-5xl);
+      font-weight: var(--font-weight-extrabold);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--foreground);
+      margin-bottom: 1.25rem;
+      text-wrap: balance;
     }
 
     h3 {
-      font-size: var(--font-size-3xl);
+      font-size: var(--font-size-4xl);
       font-weight: var(--font-weight-bold);
-      line-height: 1.4;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      text-wrap: balance;
     }
 
     h4 {
-      font-size: var(--font-size-2xl);
-      font-weight: var(--font-weight-semibold);
-      line-height: 1.4;
-      color: var(--primary);
-      margin-bottom: 0.625rem;
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--foreground);
+      margin-bottom: 0.875rem;
     }
 
     h5 {
-      font-size: var(--font-size-xl);
+      font-size: var(--font-size-2xl);
       font-weight: var(--font-weight-semibold);
-      line-height: 1.5;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
       color: var(--foreground);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
     h6 {
-      font-size: var(--font-size-lg);
+      font-size: var(--font-size-xl);
       font-weight: var(--font-weight-semibold);
-      line-height: 1.5;
+      line-height: 1.4;
       color: var(--foreground);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.625rem;
     }
 
     p {
       font-size: var(--font-size-base);
       font-weight: var(--font-weight-normal);
-      line-height: 1.6;
+      line-height: 1.75;
+      color: var(--muted-foreground);
+      margin-bottom: 1.25rem;
+      text-wrap: pretty;
+    }
+
+    /* Lead paragraph - larger text for introductions */
+    p.lead {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.7;
       color: var(--foreground);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     label {
       font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--font-weight-semibold);
       line-height: 1.5;
       color: var(--foreground);
       display: block;
-      margin-bottom: 0.375rem;
+      margin-bottom: 0.5rem;
     }
 
     button {
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-semibold);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-bold);
       line-height: 1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
+      text-transform: none;
     }
 
     input, textarea, select {
-      font-size: var(--font-size-sm);
+      font-size: var(--font-size-base);
       font-weight: var(--font-weight-normal);
       line-height: 1.5;
       color: var(--foreground);
@@ -376,7 +399,10 @@
       color: var(--primary);
       text-decoration: underline;
       text-decoration-color: transparent;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
       transition: text-decoration-color var(--transition-base) var(--ease-in-out);
+      font-weight: var(--font-weight-medium);
     }
 
     a:hover {
@@ -384,9 +410,59 @@
     }
 
     a:focus-visible {
-      outline: 2px solid var(--ring);
-      outline-offset: 2px;
-      border-radius: 2px;
+      outline: 3px solid var(--ring);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* Display text - extra large hero text */
+    .display {
+      font-size: var(--font-size-7xl);
+      font-weight: var(--font-weight-black);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: var(--gradient-hero);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-wrap: balance;
+    }
+
+    /* Subheading - between heading and paragraph */
+    .subheading {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.6;
+      color: var(--muted-foreground);
+      text-wrap: balance;
+    }
+  }
+
+  /* Responsive Typography - Tablet */
+  @media (max-width: 1024px) {
+    :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+      h1 {
+        font-size: var(--font-size-5xl);
+        letter-spacing: -0.025em;
+      }
+
+      h2 {
+        font-size: var(--font-size-4xl);
+        letter-spacing: -0.02em;
+      }
+
+      h3 {
+        font-size: var(--font-size-3xl);
+      }
+
+      h4 {
+        font-size: var(--font-size-2xl);
+      }
+
+      .display {
+        font-size: var(--font-size-6xl);
+        letter-spacing: -0.035em;
+      }
     }
   }
 
@@ -395,18 +471,46 @@
     :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
       h1 {
         font-size: var(--font-size-4xl);
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
       }
 
       h2 {
         font-size: var(--font-size-3xl);
+        letter-spacing: -0.015em;
+        margin-bottom: 0.875rem;
       }
 
       h3 {
         font-size: var(--font-size-2xl);
+        margin-bottom: 0.75rem;
       }
 
       h4 {
         font-size: var(--font-size-xl);
+        margin-bottom: 0.625rem;
+      }
+
+      h5 {
+        font-size: var(--font-size-lg);
+      }
+
+      p {
+        font-size: var(--font-size-base);
+        margin-bottom: 1rem;
+      }
+
+      p.lead {
+        font-size: var(--font-size-lg);
+      }
+
+      .display {
+        font-size: var(--font-size-5xl);
+        letter-spacing: -0.03em;
+      }
+
+      .subheading {
+        font-size: var(--font-size-base);
       }
     }
   }
