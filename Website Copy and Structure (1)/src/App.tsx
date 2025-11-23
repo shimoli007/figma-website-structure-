@@ -19,6 +19,7 @@ import { Contact } from './pages/Contact';
 import { PrivacyPolicy } from './pages/legal/PrivacyPolicy';
 import { TermsOfService } from './pages/legal/TermsOfService';
 import { AccessibilityStatement } from './pages/legal/AccessibilityStatement';
+import { AnimatedComponentsShowcase } from './components/animated/AnimatedComponentsShowcase';
 
 export default function App() {
   return (
@@ -58,6 +59,9 @@ export default function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/accessibility" element={<AccessibilityStatement />} />
+
+            {/* Animation Demo */}
+            <Route path="/animations-demo" element={<AnimatedComponentsShowcase />} />
 
             {/* Catch all - redirect to home */}
             <Route path="*" element={<Home />} />
