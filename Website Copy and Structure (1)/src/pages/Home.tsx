@@ -1,91 +1,22 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Database, Cpu, Shield, TrendingUp, DollarSign, Network, CheckCircle, Award } from 'lucide-react';
+import { Database, Cpu, Shield, TrendingUp, DollarSign, Network, CheckCircle, Award } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { HeroSection } from '../components/HeroSection';
 
 export function Home() {
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block bg-blue-500 bg-opacity-30 px-4 py-2 rounded-full mb-6">
-                <span className="text-sm">AI + Blockchain Infrastructure for Emerging Markets</span>
-              </div>
-              <h1 className="text-white mb-6">
-                Empowering SMEs with AI & Blockchain
-              </h1>
-              <p className="text-blue-100 text-lg mb-8">
-                Complete infrastructure stack for emerging market SMEs to compete globally. Train your team, digitize operations, automate workflows, trace products, and access digital finance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
-                  to="/use-cases" 
-                  className="inline-flex items-center justify-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition"
-                >
-                  View Use Cases
-                </Link>
-              </div>
-              <div className="mt-8 flex items-center gap-8">
-                <div>
-                  <div className="text-blue-100 text-sm">Trusted by</div>
-                  <div className="text-white">Government Partners</div>
-                </div>
-                <div className="border-l border-blue-400 h-12"></div>
-                <div>
-                  <div className="text-blue-100 text-sm">Supporting</div>
-                  <div className="text-white">100+ SMEs</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative bg-white p-8 rounded-lg shadow-2xl">
-              <div className="flex flex-col items-center space-y-4">
-                <div className="w-full flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Train</div>
-                    </div>
-                    <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Digitize</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <div className="bg-[#9333ea] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Automate</div>
-                    </div>
-                    <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#072048] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Trace</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full flex items-center justify-center">
-                  <div className="flex items-center space-x-2">
-                    <div className="bg-[#5b1fa3] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Finance</div>
-                    </div>
-                    <div className="text-gray-400 text-2xl">→</div>
-                    <div className="bg-[#eca52e] text-white px-4 py-2 rounded-lg text-center">
-                      <div className="text-sm">Monetize</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div style={{ background: 'var(--background)' }}>
+      {/* Modern Hero Section with Animations */}
+      <HeroSection
+        title="Empowering SMEs with AI & Blockchain"
+        subtitle="Complete infrastructure stack for emerging market SMEs to compete globally. Train your team, digitize operations, automate workflows, trace products, and access digital finance."
+        primaryCTA={{ text: 'Get Started', to: '/contact' }}
+        secondaryCTA={{ text: 'View Use Cases', to: '/use-cases' }}
+        stats={[
+          { label: 'Trusted by', value: 'Government Partners' },
+          { label: 'Supporting', value: '100+ SMEs' },
+        ]}
+      />
 
       {/* Infrastructure Stack */}
       <section className="py-20 bg-gray-50">

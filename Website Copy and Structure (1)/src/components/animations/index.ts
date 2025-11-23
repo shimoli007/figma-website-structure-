@@ -35,3 +35,15 @@ export type {
   AnimatedTextSplitProps,
   AnimatedCounterProps,
 } from '../AnimatedText';
+
+export { FloatingShapes } from '../FloatingShapes';
+export type { FloatingShapesProps } from '../FloatingShapes';
+
+export { ScrollIndicator, ScrollIndicatorMinimal } from '../ScrollIndicator';
+export type {
+  ScrollIndicatorProps,
+  ScrollIndicatorMinimalProps,
+} from '../ScrollIndicator';
+
+export { HeroSection } from '../HeroSection';
+export type { HeroSectionProps } from '../HeroSection';
